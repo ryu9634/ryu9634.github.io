@@ -103,7 +103,7 @@ analytics:
 # Site Author
 author:
   name             : "유승표"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/asset/이력서용 사진.jpg"
   bio              : "개인 기록 보관"
   location         : "Somewhere"
   email            :

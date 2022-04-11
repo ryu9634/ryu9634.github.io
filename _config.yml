@@ -106,11 +106,11 @@ author:
   avatar           : "/asset/이력서용 사진.jpg"
   bio              : "개인 기록 보관"
   location         : "Somewhere"
-  email            :
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "ryusp0515@naver.com"
+      url: "mailto:ryusp0515@naver.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: ""

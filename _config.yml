@@ -102,8 +102,9 @@ analytics:
 
 # Site Author
 author:
+  
+  avatar           : "/asset/img/이력서용 사진.jpg"
   name             : "유승표"
-  avatar           : "/asset/이력서용 사진.jpg"
   bio              : "개인 기록 보관"
   location         : "Somewhere"
   email            : 

@@ -10,3 +10,11 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+docs :
+ - title : "카테고리"
+  children : 
+    - title : "Category"
+    url : /Categories/
+    - title : "Tag"
+    url : /tags/

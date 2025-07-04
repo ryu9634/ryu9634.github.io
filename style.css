@@ -5,11 +5,16 @@
     box-sizing: border-box;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     font-family: "Helvetica Neue", sans-serif;
     background: #fff;
     color: #000;
     line-height: 1.6;
+    padding-top: 72px; /* 고정된 header 공간 확보 */
   }
   
   a {
@@ -21,10 +26,17 @@
     width: 90%;
     max-width: 960px;
     margin: 0 auto;
+    margin-top: 1px; /* 각 섹션 내에서 컨텐츠 시작 간격 */
   }
   
-  /* Header */
+  /* Header (고정) */
   header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1000;
     border-bottom: 1px solid #000;
     padding: 1rem 0;
   }
@@ -34,25 +46,24 @@
     font-weight: bold;
   }
   
-  nav {
-    display: flex;
-    gap: 1.5rem;
-    font-size: 0.9rem;
-  }
-  
   header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
   /* Hero Section */
   .hero {
-    height: 70vh;
+    height: calc(100vh - 72px); /* 헤더 높이 제외 */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
   }
   
@@ -68,10 +79,13 @@
     letter-spacing: 1.5px;
   }
   
-  /* Sections */
+  /* Content Sections */
   .section {
-    padding: 4rem 0;
-    border-top: 1px solid #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+    position: relative;
   }
   
   .section h3 {
@@ -122,6 +136,69 @@
     transition: 0.2s ease;
   }
   
+  .profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .profile-photo img {
+    width: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid #000;
+  }
+  
+  .profile-info {
+    flex: 1;
+    min-width: 260px;
+  }
+  
+  .contact-list {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.8;
+  }
+  
+  .contact-list li strong {
+    color: seagreen;
+  }
+  
+  .edu-item {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .edu-item small {
+    color: #555;
+    display: inline-block;
+    margin-top: 0.3rem;
+    line-height: 1.5;
+  }
+  
+  .stack-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1rem 2rem;
+    align-items: start;
+  }
+  
+  .stack-category h4 {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #666;
+    margin: 0.5rem 0;
+  }
+  
+  .stack-items ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+    line-height: 1.8;
+    font-size: 0.95rem;
+  }
+  
   /* Footer */
   footer {
     border-top: 1px solid #000;
@@ -129,5 +206,30 @@
     padding: 2rem 0;
     font-size: 0.8rem;
     color: #666;
+  }
+  
+  .stack-grid-2col {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .stack-col {
+    flex: 1 1 300px;
+    min-width: 260px;
+  }
+  
+  .stack-category h4 {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #666;
+    margin: 1rem 0 0.3rem;
+  }
+  
+  .stack-items ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+    line-height: 1.8;
+    font-size: 0.95rem;
   }
   

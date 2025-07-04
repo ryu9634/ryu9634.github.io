@@ -1,13 +1,70 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-    </head>
-    <body>
-        <p>Hello, World!</p>
-      
-    </body>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SungPyo Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>SungPyo</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>I'm a Developer</h2>
+    <p>Clean Code, Clear Design</p>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h3>About</h3>
+      <p>
+        저는 Java 백엔드 기반의 개발자로, 현재는 React 프론트도 익히고 있습니다.
+        기술을 통해 문제를 푸는 것을 즐깁니다.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h3>Projects</h3>
+      <div class="projects">
+        <div class="card">
+          <h4>Project Title 1</h4>
+          <p>설명 요약. 기술 스택, 기능, 역할.</p>
+        </div>
+        <div class="card">
+          <h4>Project Title 2</h4>
+          <p>설명 요약. 기술 스택, 기능, 역할.</p>
+        </div>
+        <div class="card">
+          <h4>Project Title 3</h4>
+          <p>설명 요약. 기술 스택, 기능, 역할.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h3>Contact</h3>
+      <p>Email: youremail@example.com</p>
+      <a href="https://github.com/yourname" class="btn">GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <small>© 2025 SungPyo. All rights reserved.</small>
+    </div>
+  </footer>
+</body>
 </html>

@@ -6,6 +6,15 @@
   <title>SungPyo Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
+<script>
+  function openPopup() {
+    document.getElementById("popupLayer").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.getElementById("popupLayer").style.display = "none";
+  }
+</script>
 <body>
     <header>
         <div class="container">
@@ -22,42 +31,6 @@
     <h2>버들처럼 유연하게</h2>
     <p>흔들리더라도 꺾이지 않고 그 자리에 서 있는 버드나무가 되고 싶은 사람입니다.</p>
     </section>
-
-    <section id="contact" class="section">        
-            <div class="container profile-wrapper">
-              <!-- 좌측: 사진 -->
-              <div class="profile-photo">
-                <img src="profile.jpg" alt="Profile Photo" />
-              </div>
-          
-              <!-- 우측: Contact & Education -->
-              <div class="profile-info">
-                <h3>Contact & Channels</h3>
-                <hr />
-                <ul class="contact-list">
-                  <li><strong>📞 Telephone</strong> | 010-2567-9634</li>
-                  <li><strong>📧 Email</strong> | ryusp0515@naver.com</li>
-                  <li><strong>🔗 Github</strong> | <a href="https://github.com/ryu9634" target="_blank">https://github.com/ryu9634</a></li>
-                </ul>
-          
-                <h3 style="margin-top: 2rem;">🎓 Education</h3>
-                <div class="edu-item">
-                  <strong>서울사이버대학교</strong><br />
-                  <span>2021. 03 ~ 2025. 08 (졸업예정)</span>
-                </div>
-                <div class="edu-item">
-                  <strong>코리아IT아카데미</strong><br />
-                  <span>2021. 11 ~ 2022. 04</span><br />
-                  <small>
-                    (AI활용 소프트웨어 개발 <br />
-                    JAVA, ORACLE, MYSQL, SPRING, SPRING BOOT, HTML/CSS/JS 등)
-                  </small>
-                </div>                
-              </div>
-            </div>
-          </section>
-          
-
     <section id="about" class="section">
     <div class="container">
       <h3>About</h3>
@@ -75,10 +48,12 @@
           일이 잘 풀리지 않을 때는 머리를 식힐 줄 알며, 문제를 해결할 때의 쾌감을 아는 개발자입니다.
         </li>
       </ul>
-      <br>
+      
+        </section>
+        <section id="skills" class="section">
+    <div class="container">      
       <h3>Stacks</h3>          
           <hr style="margin: 1rem 0; border: none; border-top: 1px solid #ccc;" />
-      
           <div class="stack-grid-2col">
             <!-- Left Column -->
             <div class="stack-col">
@@ -142,36 +117,79 @@
             </div>
           </div>
           
-    </div>
-    </section>   
+        </div>
+        </section>      
 
-    <section id="projects" class="section">
-    
-    <div class="container">
-      <h3>Projects</h3>
-      <hr style="margin: 1rem 0; border: none; border-top: 1px solid #ccc;" />
-      <div class="projects">
-        <div class="card">
-          <h4>국립중앙도서관 통계자료시스템<br>통합유지관리</h4>
-          
-        </div>
-        <div class="card">
-          <h4>국립중앙도서관 정보서비스<br>통합유지관리</h4>
-          
-        </div>
-        <div class="card">
-          <h4>국립어린이청소년 도서관<br>통합유지관리</h4>
-          
-        </div>
-        <div class="card">
-            <h4>국립중앙도서관 국가전자도서관<br>통합유지관리</h4>
-            
+        <section id="projects" class="section">
+          <div class="container">
+            <h3>Projects</h3>
+            <hr style="margin: 1rem 0; border: none; border-top: 1px solid #ccc;" />
+            <div class="projects">
+              <div class="card" onclick="openPopup()">
+                <h4>국립중앙도서관 통계자료시스템<br>통합유지관리</h4>
+              </div>
+              <div class="card" onclick="openPopup()">
+                <h4>국립중앙도서관 정보서비스<br>통합유지관리</h4>
+              </div>
+              <div class="card" onclick="openPopup()">
+                <h4>국립어린이청소년 도서관<br>통합유지관리</h4>
+              </div>
+              <div class="card" onclick="openPopup()">
+                <h4>국립중앙도서관 국가전자도서관<br>통합유지관리</h4>
+              </div>
+            </div>
           </div>
-      </div>
-    </div>
-  </section>
+        </section>
+        
+        <section id="contact" class="section">        
+            <div class="container profile-wrapper">
+              <!-- 좌측: 사진 -->
+              <div class="profile-photo">
+                <img class="img" src="profile.jpg" alt="Profile Photo" />
+              </div>
+          
+              <!-- 우측: Contact & Education -->
+              <div class="profile-info">
+                <h3>Contact & Channels</h3>
+                <hr />
+                <ul class="contact-list">
+                  <li><strong>Telephone</strong> | 010-2567-9634</li>
+                  <li><strong>Email</strong> | ryusp0515@naver.com</li>
+                  <li><strong>Github</strong> | <a href="https://github.com/ryu9634" target="_blank">https://github.com/ryu9634</a></li>
+                 
+                </ul>
+          
+                <h3 style="margin-top: 2rem;">🎓 Education</h3>
+                <div class="edu-item">
+                  <strong>서울사이버대학교</strong><br />
+                  <span>2021. 03 ~ 2025. 08 (졸업예정)</span>
+                </div>
+                <!-- <div class="edu-item">
+                  <strong>코리아IT아카데미</strong><br />
+                  <span>2021. 11 ~ 2022. 04</span><br />
+                  <small>
+                    (AI활용 소프트웨어 개발 <br />
+                    JAVA, ORACLE, MYSQL, SPRING, SPRING BOOT, HTML/CSS/JS 등)
+                  </small>
+                </div> -->
+              </div>
+            </div>
+          </section>
+          
 
+    
 
+    
+
+<!-- 레이어 팝업 -->
+<div id="popupLayer" class="popup-layer">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closePopup()">×</span>
+    <h3>About Me</h3>
+    <p>끊임없이 배우고, 실행하며 성장하는 백엔드 개발자 유승표입니다.<br />
+    실무 프로젝트 경험을 바탕으로 Java 기반 웹 서비스 개발에 강점을 가지고 있습니다.</p>
+  </div>
+</div>
 
   <footer>
     <div class="container">

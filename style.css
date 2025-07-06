@@ -86,6 +86,7 @@
     flex-direction: column;
     justify-content: flex-start;    
     position: relative;
+    padding :20px;
   }
   
   .section:nth-of-type(even) {

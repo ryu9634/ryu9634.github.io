@@ -266,3 +266,92 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+ .pt50 {
+  display:inline-block; 
+  width:100px;
+}
+.stack-items > ul > li {
+  margin : 5px;
+}
+.stack-items > ul > li > img{
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+/* 모바일 대응 (최대 768px) */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  nav {
+    gap: 1rem;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .profile-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-photo img {
+    width: 180px;
+  }
+
+  .profile-info {
+    width: 100%;
+  }
+
+  .stack-grid-2col {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .stack-col {
+    min-width: 100%;
+  }
+
+  .card h4 {
+    font-size: 0.9rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .section {
+    height: auto;
+    padding-bottom: 3rem;
+  }
+
+  .section h3 {
+    font-size: 1.1rem;
+  }
+
+  .stack-items ul {
+    font-size: 0.9rem;
+  }
+
+  .popup-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}

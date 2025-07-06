@@ -4,17 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SungPyo Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link href="style.css" rel="stylesheet" />
+  <link href="common.js" rel="script" />
 </head>
-<script>
-  function openPopup() {
-    document.getElementById("popupLayer").style.display = "flex";
-  }
 
-  function closePopup() {
-    document.getElementById("popupLayer").style.display = "none";
-  }
-</script>
 <body>
     <header>
         <div class="container">
@@ -39,10 +32,10 @@
         <li>
           안녕하십니까! <strong style="color: seagreen;">버들처럼 유연한 개발자</strong> 유승표입니다.
         </li>
-        <li>무엇이든 관심이 생기면 빠르게 도전하고 실행합니다.</li>
+        <li>무엇이든 관심이 생기면 빠르게 <strong style="color: seagreen;">도전하고 실행</strong>합니다.</li>
         <li>단 한 줄의 코드라도 가독성과 효율성의 가치를 담기 위해 노력합니다.</li>
         <li>
-          다른 팀과의 소통을 중시하며, 협업의 중요성으로 개인이 아닌 팀의 성공을 중요하게 생각합니다.
+          다른 팀과의 <strong style="color: seagreen;">유연한</strong> 소통을 중시하며, 협업의 중요성으로 개인이 아닌 팀의 성공을 중요하게 생각합니다.
         </li>
         <li>
           일이 잘 풀리지 않을 때는 머리를 식힐 줄 알며, 문제를 해결할 때의 쾌감을 아는 개발자입니다.
@@ -50,77 +43,89 @@
       </ul>
       
         </section>
-        <section id="skills" class="section">
+    <section id="skills" class="section">
     <div class="container">      
       <h3>Stacks</h3>          
           <hr style="margin: 1rem 0; border: none; border-top: 1px solid #ccc;" />
           <div class="stack-grid-2col">
-            <!-- Left Column -->
-            <div class="stack-col">
-              <!-- Back-End -->
-              <div class="stack-category">
-                <h4>Back-End</h4>
-              </div>
-              <div class="stack-items">
-                <ul>
-                  <li>JAVA (SPRING)</li>
-                  <li>MyBatis</li>
-                </ul>
-              </div>
-          
-              <!-- Front-End -->
-              <div class="stack-category">
-                <h4>Front-End</h4>
-              </div>
-              <div class="stack-items">
-                <ul>
-                  <li>HTML, CSS, JS</li>
-                  <li>Thymeleaf</li>
-                  <li>JSP</li>
-                </ul>
-              </div>
-            </div>
-          
-            <!-- Right Column -->
-            <div class="stack-col">
-              <!-- DevOps & DBMS -->
-              <div class="stack-category">
-                <h4>DevOps & DBMS</h4>
-              </div>
-              <div class="stack-items">
-                <ul>
-                  <li>Git, SVN</li>
-                  <li>Oracle, Cubrid</li>
-                </ul>
-              </div>
-          
-              <!-- OS -->
-              <div class="stack-category">
-                <h4>OS</h4>
-              </div>
-              <div class="stack-items">
-                <ul>
-                  <li>Windows</li>
-                  <li>Linux (Ubuntu)</li>
-                </ul>
-              </div>
-          
-              <!-- ETC -->
-              <div class="stack-category">
-                <h4>ETC</h4>
-              </div>
-              <div class="stack-items">
-                <ul>
-                  <li>Solr</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        </section>      
-
-        <section id="projects" class="section">
+  <!-- Left Column -->
+  <div class="stack-col">
+    <!-- 언어 -->
+    <div class="stack-category">
+      <h4>Language</h4>
+    </div>
+    <div class="stack-items">
+      <ul>
+        <li><img src="./Develope_skill_icon/Java-Light.svg"> Java (주력)</li>
+        <li><img src="./Develope_skill_icon/JavaScript.svg"> JavaScript (중급)</li>
+        <li><img src="./Develope_skill_icon/TypeScript.svg"> TypeScript (기초)</li>
+        <li><img src="./Develope_skill_icon/Python-Light.svg"> Python (기초)</li>
+        <li><img src="./Develope_skill_icon/Kotlin-Light.svg"> Kotlin (학습 중)</li>
+      </ul>
+    </div>
+    <!-- Front-End -->
+    <div class="stack-category">
+      <h4>Front-End</h4>
+    </div>
+    <div class="stack-items">
+      <ul>        
+        <li><img src="./Develope_skill_icon/HTML.svg"> HTML </li>
+        <li><img src="./Develope_skill_icon/CSS.svg"> CSS</li> 
+        <li><img src="./Develope_skill_icon/JQuery.svg">jQuery</li>
+        <li>JSP, Thymeleaf (숙련)</li>
+        <li><img src="./Develope_skill_icon/React-Light.svg"> React.js (기초)</li>
+        <li><img src="./Develope_skill_icon/Vue.svg"> Vue.js (학습중)</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Right Column -->
+  <div class="stack-col">
+    <!-- Back-End -->
+    <div class="stack-category">
+      <h4>Back-End / Framework</h4>
+    </div>
+    <div class="stack-items">
+      <ul>
+        <li><img src="./Develope_skill_icon/Spring-Light.svg"> Spring / eGovFramework (주력)</li>
+        <li>MyBatis (중급)</li>        
+      </ul>
+    </div>
+    <!-- DB -->
+    <div class="stack-category">
+      <h4>DB</h4>
+    </div>
+    <div class="stack-items">
+      <ul>
+        <li>Oracle · Cubrid (주력)</li>
+        <li>Tibero (중급)</li>
+      </ul>
+    </div>
+    <!-- DevOps -->
+    <div class="stack-category">
+      <h4>DevOps / Infra</h4>
+    </div>
+    <div class="stack-items">
+      <ul>
+        <li><img src="./Develope_skill_icon/Git.svg">Git (기초)</li>
+        <li>SVN (기초)</li>
+        <li>Jboss (기초)</li>
+        <li><img src="./Develope_skill_icon/Docker.svg"> Docker (학습중)</li>        
+      </ul>
+    </div>
+    <!-- OS -->
+    <div class="stack-category">
+      <h4>OS</h4>
+    </div>
+    <div class="stack-items">
+      <ul>
+        <li><img src="./Develope_skill_icon/Linux-Light.svg">Linux (Ubuntu)</li>
+        <li>Windows</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+<section id="projects" class="section">
           <div class="container">
             <h3>Projects</h3>
             <hr style="margin: 1rem 0; border: none; border-top: 1px solid #ccc;" />
@@ -140,6 +145,8 @@
             </div>
           </div>
         </section>
+
+        
         
         <section id="contact" class="section">        
             <div class="container profile-wrapper">
@@ -150,12 +157,15 @@
           
               <!-- 우측: Contact & Education -->
               <div class="profile-info">
-                <h3>Contact & Channels</h3>
+                <h3>profile</h3>
                 <hr />
                 <ul class="contact-list">
-                  <li><strong>Telephone</strong> | 010-2567-9634</li>
-                  <li><strong>Email</strong> | ryusp0515@naver.com</li>
-                  <li><strong>Github</strong> | <a href="https://github.com/ryu9634" target="_blank">https://github.com/ryu9634</a></li>
+                  <li><strong><span class="pt50">name</span></strong> | 유승표</li>
+                  <li><strong><span class="pt50">birth</span></strong> | 1995.05.15</li>
+                  
+                  <li><strong><span class="pt50">Telephone</span></strong> | 010-2567-9634</li>
+                  <li><strong><span class="pt50">Email</span></strong> | ryusp0515@naver.com</li>
+                  <li><strong><span class="pt50">Github</span></strong> | <a href="https://github.com/ryu9634" target="_blank">https://github.com/ryu9634</a></li>
                  
                 </ul>
           

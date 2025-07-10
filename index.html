@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SungPyo Portfolio</title>
   <link href="style.css" rel="stylesheet" />
-  <link href="common.js" rel="script" />
+  
 </head>
+<script src="common.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("popupLayer");
 
+    popup.addEventListener("click", function () {
+      closePopup();
+    });
+  });
+  </script>
 <body>
     <header>
         <div class="container">
@@ -56,8 +65,8 @@
     </div>
     <div class="stack-items">
       <ul>
-        <li><img src="./Develope_skill_icon/Java-Light.svg"> Java (주력)</li>
-        <li><img src="./Develope_skill_icon/JavaScript.svg"> JavaScript (중급)</li>
+        <li><img src="./Develope_skill_icon/Java-Light.svg"> Java</li>
+        <li><img src="./Develope_skill_icon/JavaScript.svg"> JavaScript</li>
         <li><img src="./Develope_skill_icon/TypeScript.svg"> TypeScript (기초)</li>
         <li><img src="./Develope_skill_icon/Python-Light.svg"> Python (기초)</li>
         <li><img src="./Develope_skill_icon/Kotlin-Light.svg"> Kotlin (학습 중)</li>
@@ -86,8 +95,8 @@
     </div>
     <div class="stack-items">
       <ul>
-        <li><img src="./Develope_skill_icon/Spring-Light.svg"> Spring / eGovFramework (주력)</li>
-        <li>MyBatis (중급)</li>        
+        <li><img src="./Develope_skill_icon/Spring-Light.svg"> Spring / eGovFramework</li>
+        <li>MyBatis</li>        
       </ul>
     </div>
     <!-- DB -->
@@ -96,8 +105,8 @@
     </div>
     <div class="stack-items">
       <ul>
-        <li>Oracle · Cubrid (주력)</li>
-        <li>Tibero (중급)</li>
+        <li>Oracle · Cubrid</li>
+        <li>Tibero</li>
       </ul>
     </div>
     <!-- DevOps -->
@@ -106,9 +115,9 @@
     </div>
     <div class="stack-items">
       <ul>
-        <li><img src="./Develope_skill_icon/Git.svg">Git (기초)</li>
-        <li>SVN (기초)</li>
-        <li>Jboss (기초)</li>
+        <li><img src="./Develope_skill_icon/Git.svg">Git</li>
+        <li>SVN</li>
+        <li>Jboss</li>
         <li><img src="./Develope_skill_icon/Docker.svg"> Docker (학습중)</li>        
       </ul>
     </div>
@@ -130,17 +139,26 @@
             <h3>Projects</h3>
             <hr style="margin: 1rem 0; border: none; border-top: 1px solid #ccc;" />
             <div class="projects">
-              <div class="card" onclick="openPopup()">
+              <div class="card">
+                <a href="javacsript:void(0);" onclick="openPopup('stat')">
                 <h4>국립중앙도서관 통계자료시스템<br>통합유지관리</h4>
+                </a>
               </div>
-              <div class="card" onclick="openPopup()">
-                <h4>국립중앙도서관 정보서비스<br>통합유지관리</h4>
+              <div class="card">
+                <a href="javacsript:void(0);" onclick="openPopup('nl')">
+                <h4>국립중앙도서관 정보서비스<br>통합유지관리</h4></a>
               </div>
-              <div class="card" onclick="openPopup()">
-                <h4>국립어린이청소년 도서관<br>통합유지관리</h4>
+              <div class="card">
+                <a href="javacsript:void(0);" onclick="openPopup('nlcy')">
+                <h4>국립어린이청소년 도서관<br>통합유지관리</h4></a>
               </div>
-              <div class="card" onclick="openPopup()">
-                <h4>국립중앙도서관 국가전자도서관<br>통합유지관리</h4>
+              <div class="card">
+                <a href="javacsript:void(0);" onclick="openPopup('dlib')">
+                <h4>국립중앙도서관 국가전자도서관<br>통합유지관리</h4></a>
+              </div>
+              <div class="card">
+                <a href="javacsript:void(0);" onclick="openPopup('nlnk')">
+                <h4 style="font-size: 0.9rem;">국립중앙도서관 국가지식자원공유서비스<br>통합유지관리</h4></a>
               </div>
             </div>
           </div>
@@ -198,14 +216,15 @@
     
 
 <!-- 레이어 팝업 -->
-<div id="popupLayer" class="popup-layer">
+<!-- 팝업 레이어 (비어있는 상태) -->
+<div id="popupLayer" class="popup-layer" style="display: none;">
   <div class="popup-content">
     <span class="popup-close" onclick="closePopup()">×</span>
-    <h3>About Me</h3>
-    <p>끊임없이 배우고, 실행하며 성장하는 백엔드 개발자 유승표입니다.<br />
-    실무 프로젝트 경험을 바탕으로 Java 기반 웹 서비스 개발에 강점을 가지고 있습니다.</p>
+    <div id="popupBody"><!-- JS가 여기에 내용 삽입 --></div>
   </div>
 </div>
+
+
 
   <footer>
     <div class="container">

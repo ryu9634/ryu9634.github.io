@@ -81,12 +81,12 @@
   
   /* Content Sections */
   .section {
+    padding: 20px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;    
     position: relative;
-    padding :20px;
   }
   
   .section:nth-of-type(even) {
@@ -241,36 +241,79 @@
   .img {
     width: 200px;
     height: 300px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
-  .popup-layer {
-  display: none;
+ /* 레이어 배경 */
+.popup-layer {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 9999;
-  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
   align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 1rem;
 }
 
+/* 팝업 본체 */
 .popup-content {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 90%;
-  text-align: center;
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  padding: 15px;
+  overflow-y: auto;
+  border-radius: 8px;
   position: relative;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
+/* 닫기 버튼 */
 .popup-close {
   position: absolute;
-  top: 10px; right: 15px;
+  top: 10px;
+  right: 15px;
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* 텍스트 스타일링 */
+.popup-content h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.popup-content h4 {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.popup-content p {
+  margin-bottom: 0.5rem;
+}
+
+.popup-content ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.popup-content ul li {
+  line-height: 1.6;
+}
+
+/* 이미지 반응형 */
+.popup-content img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+}
+
 
  .pt50 {
   display:inline-block; 

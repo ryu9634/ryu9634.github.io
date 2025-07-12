@@ -82,7 +82,7 @@
   /* Content Sections */
   .section {
     padding: 20px;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;    

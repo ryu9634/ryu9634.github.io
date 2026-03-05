@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d8f3dc"/>
+      <stop offset="30%" style="stop-color:#b7e4c7"/>
+      <stop offset="60%" style="stop-color:#95d5b2"/>
+      <stop offset="100%" style="stop-color:#74c69d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.4)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <text x="600" y="200" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="600" letter-spacing="6" fill="#1b4332" opacity="0.7">WEB DEVELOPER</text>
+  <text x="600" y="320" text-anchor="middle" font-family="sans-serif" font-size="90" font-weight="900" fill="#1b4332">버들처럼 유연하게</text>
+  <text x="600" y="420" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#1b4332" opacity="0.6">흔들리더라도 꺾이지 않고 그 자리에 서 있는 버드나무가 되고 싶은 사람입니다.</text>
+  <line x1="560" y1="360" x2="640" y2="360" stroke="#52b788" stroke-width="4" stroke-linecap="round"/>
+  <text x="600" y="560" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#1b4332" opacity="0.5">ryu9634.github.io</text>
+</svg>

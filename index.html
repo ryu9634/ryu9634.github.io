@@ -5,260 +5,275 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SeungPyo Portfolio</title>
   <link href="style.css" rel="stylesheet" />
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
-<script src="common.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const popup = document.getElementById("popupLayer");
-
-    popup.addEventListener("click", function () {
-      closePopup();
-    });
-  });
-  </script>
 <body>
-    <header>
-        <div class="container">
-        <h1>SeungPyo Ryu</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#profile">profile</a>
-        </nav>
-        </div>
-    </header>
+  <header id="header">
+    <div class="container header-inner">
+      <h1 class="logo">유승표<span class="accent">.</span></h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Stacks</a>
+        <a href="#profile">Profile</a>
+      </nav>
+      <button class="nav-toggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-    <section class="hero">
-    <h2>버들처럼 유연하게</h2>
-    <p>흔들리더라도 꺾이지 않고 그 자리에 서 있는 버드나무가 되고 싶은 사람입니다.</p>
-    </section>
-    <section id="about" class="section">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-sub fade-up">WEB - Developer</p>
+      <h2 class="hero-title fade-up delay-1">버들처럼<br><span class="accent">유연</span>하게</h2>
+      <p class="hero-desc fade-up delay-2">흔들리더라도 꺾이지 않고 그 자리에 서 있는<br>버드나무가 되고 싶은 사람입니다.</p>
+      <a href="#about" class="hero-cta fade-up delay-3">More About Me</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
     <div class="container">
-      <h3>About</h3>
-      <hr style="margin: 1rem 0; border: none; border-top: 1px solid #ccc;" />
-      <ul style="list-style-type: disc; padding-left: 1.2rem; line-height: 1.8;">
-        <li>
-          안녕하십니까! <strong style="color: seagreen;">버들처럼 유연한 개발자</strong> 유승표입니다.
-        </li>
-        <li>무엇이든 관심이 생기면 빠르게 <strong style="color: seagreen;">도전하고 실행</strong>합니다.</li>
-        <li>단 한 줄의 코드라도 가독성과 효율성의 가치를 담기 위해 노력합니다.</li>
-        <li>
-          다른 팀과의 <strong style="color: seagreen;">유연한</strong> 소통을 중시하며, 협업의 중요성으로 개인이 아닌 팀의 성공을 중요하게 생각합니다.
-        </li>
-        <li>
-          일이 잘 풀리지 않을 때는 머리를 식힐 줄 알며, 문제를 해결할 때의 쾌감을 아는 개발자입니다.
-        </li>
-      </ul>
-      
-        </section>
-        <section id="projects" class="section">
-          <div class="container">
-            <h3>Projects</h3>
-            <hr style="margin: 1rem 0; border: none; border-top: 1px solid #ccc;" />
-            <div class="projects">
-              <div class="card">
-                <a href="javacsript:void(0);" onclick="openPopup('stat')">
-                <h4>국립중앙도서관 통계자료시스템<br>통합유지관리</h4>
-                </a>
-                <div class="stack-items">
-                  <ul>
-                    <li>업무일지, 월간·분기 통계 입력, 조회 화면 개발</li>
-                    <li>대시보드 페이지 구현 (차트/테이블 혼합)</li>
-                  </ul>
-                </div>
+      <h3 class="section-title reveal">About Me</h3>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div class="about-icon">&#9889;</div>
+          <h4>빠른 실행력</h4>
+          <p>무엇이든 관심이 생기면 빠르게 도전하고 실행합니다.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-icon">&#128736;</div>
+          <h4>코드 품질</h4>
+          <p>단 한 줄의 코드라도 가독성과 효율성의 가치를 담기 위해 노력합니다.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-icon">&#129309;</div>
+          <h4>유연한 협업</h4>
+          <p>다른 팀과의 유연한 소통을 중시하며, 팀의 성공을 중요하게 생각합니다.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-icon">&#128161;</div>
+          <h4>문제 해결</h4>
+          <p>일이 잘 풀리지 않을 때는 머리를 식힐 줄 알며, 문제를 해결할 때의 쾌감을 아는 개발자입니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h3 class="section-title reveal">Projects</h3>
+      <div class="projects-grid">
+        <div class="project-card reveal" onclick="openPopup('stat')">
+          <div class="project-number">01</div>
+          <h4>국립중앙도서관<br>통계자료시스템</h4>
+          <p>업무일지, 월간/분기 통계 입력, <br>조회 화면 개발 및 대시보드 페이지 구현</p>
+          <span class="project-more">자세히 보기 &rarr;</span>
+        </div>
+        <div class="project-card reveal" onclick="openPopup('nl')">
+          <div class="project-number">02</div>
+          <h4>국립중앙도서관<br>정보서비스</h4>
+          <p>국립중앙도서관 포털 및 서비스 시스템 전반에 <br>대한 운영 유지보수 수행</p>
+          <span class="project-more">자세히 보기 &rarr;</span>
+        </div>
+        <div class="project-card reveal" onclick="openPopup('nlcy')">
+          <div class="project-number">03</div>
+          <h4>국립어린이청소년<br>도서관</h4>
+          <p>신청 이력 페이지 개발 및 사용자 조회 편의성 <br>강화</p>
+          <span class="project-more">자세히 보기 &rarr;</span>
+        </div>
+        <div class="project-card reveal" onclick="openPopup('dlib')">
+          <div class="project-number">04</div>
+          <h4>국가전자도서관</h4>
+          <p>Solr 기반 통합 검색 기능 유지보수 및 <br>메타데이터 처리 로직 대응</p>
+          <span class="project-more">자세히 보기 &rarr;</span>
+        </div>
+        <div class="project-card reveal" onclick="openPopup('nlnk')">
+          <div class="project-number">05</div>
+          <h4>국가지식자원<br>공유서비스</h4>
+          <p>사용자 민원 대응 및 오류 분석 지원</p>
+          <span class="project-more">자세히 보기 &rarr;</span>
+        </div>
+        <div class="project-card reveal" onclick="openPopup('seongdong')">
+          <div class="project-number">06</div>
+          <h4>성동구청<br>시스템 유지보수</h4>
+          <p>성동구청 관련 시스템 운영 및 유지보수 수행</p>
+          <span class="project-more">자세히 보기 &rarr;</span>
+        </div>
+        <div class="project-card reveal" onclick="openPopup('surge-predictor')">
+          <span class="project-badge side">Side Project</span> <span class="project-badge vibe">Vibe Coding</span> 
+          <div class="project-number">07</div>
+          <h4>주식 급등 예측<br>자동화 시스템</h4>
+          <p>Python + GitHub Actions 기반 급등 종목 분석 및 텔레그램 알림 자동화</p>
+          <span class="project-more">자세히 보기 &rarr;</span>
+        </div>
+        <div class="project-card reveal" onclick="openPopup('printPP')">
+          <span class="project-badge side">Side Project</span>
+          <div class="project-number">08</div>
+          <h4>예술인 포트폴리오<br>웹사이트</h4>
+          <p>Spring Boot + Vanilla JS 기반 예술인 작품 갤러리 및 포트폴리오 사이트 개발</p>
+          <span class="project-more">자세히 보기 &rarr;</span>
+        </div>
+        <div class="project-card reveal" onclick="openPopup('upbit-auto')">
+          <span class="project-badge side">Side Project</span> <span class="project-badge vibe">Vibe Coding</span> 
+          <div class="project-number">09</div>
+          <h4>업비트 알고리즘<br>자동매매 시스템</h4>
+          <p>Python + Google Cloud 기반 암호화폐 자동매매 봇 개발 및 24시간 자동 운영</p>
+          <span class="project-more">자세히 보기 &rarr;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h3 class="section-title reveal">Tech Stacks</h3>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">Language</h4>
+          <div class="skill-tags">
+            <span class="skill-tag"><img src="./Develope_skill_icon/Java-Light.svg" alt="Java">Java</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/JavaScript.svg" alt="JS">JavaScript</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Python-Light.svg" alt="Python">Python</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">Front-End</h4>
+          <div class="skill-tags">
+            <span class="skill-tag"><img src="./Develope_skill_icon/HTML.svg" alt="HTML">HTML</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/CSS.svg" alt="CSS">CSS</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/JQuery.svg" alt="jQuery">jQuery</span>
+            <span class="skill-tag">JSP</span>
+            <span class="skill-tag">Thymeleaf</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/React-Light.svg" alt="React">React.js</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">Back-End / Framework</h4>
+          <div class="skill-tags">
+            <span class="skill-tag"><img src="./Develope_skill_icon/Spring-Light.svg" alt="Spring">Spring</span>
+            <span class="skill-tag">eGovFramework</span>
+            <span class="skill-tag">MyBatis</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">Database</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Oracle</span>
+            <span class="skill-tag">Cubrid</span>
+            <span class="skill-tag">Tibero</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">DevOps / Infra</h4>
+          <div class="skill-tags">
+            <span class="skill-tag"><img src="./Develope_skill_icon/Git.svg" alt="Git">Git</span>
+            <span class="skill-tag">SVN</span>
+            <span class="skill-tag">JBoss</span>
+            <span class="skill-tag">Jeus</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">OS</h4>
+          <div class="skill-tags">
+            <span class="skill-tag"><img src="./Develope_skill_icon/Linux-Light.svg" alt="Linux">Linux</span>
+            <span class="skill-tag">Windows</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile -->
+  <section id="profile" class="section section-alt">
+    <div class="container">
+      <h3 class="section-title reveal">Profile</h3>
+      <div class="profile-wrapper reveal">
+        <div class="profile-photo">
+          <img src="profile.jpg" alt="Profile Photo" />
+        </div>
+        <div class="profile-info">
+          <div class="profile-details">
+            <div class="profile-row">
+              <span class="profile-label">Name</span>
+              <span class="profile-value">유승표</span>
+            </div>
+            <div class="profile-row">
+              <span class="profile-label">Birth</span>
+              <span class="profile-value">1995.05.15</span>
+            </div>
+            <div class="profile-row">
+              <span class="profile-label">Tel</span>
+              <span class="profile-value"><a href="tel:010-2567-9634">010-2567-9634</a></span>
+            </div>
+            <div class="profile-row">
+              <span class="profile-label">Email</span>
+              <span class="profile-value"><a href="mailto:ryusp0515@naver.com">ryusp0515@naver.com</a></span>
+            </div>
+            <div class="profile-row">
+              <span class="profile-label">Github</span>
+              <span class="profile-value"><a href="https://github.com/ryu9634" target="_blank">github.com/ryu9634</a></span>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-badge">Education</span>
+                <h4>서울사이버대학교</h4>
+                <span class="timeline-date">2021. 03 ~ 2025. 08 (졸업예정)</span>
               </div>
-              <div class="card">
-                <a href="javacsript:void(0);" onclick="openPopup('nl')">
-                <h4>국립중앙도서관 정보서비스<br>통합유지관리</h4></a>
-                <div class="stack-items">
-                  <ul>
-                    <li>국립중앙도서관 포털 및 서비스 시스템 전반에 대한 운영 유지보수 수행</li>
-                  </ul>
-                </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-badge career">Career</span>
+                <h4>랜드소프트</h4>
+                <span class="timeline-date">2022. 04 ~ 2025.09</span>
               </div>
-              <div class="card">
-                <a href="javacsript:void(0);" onclick="openPopup('nlcy')">
-                <h4>국립어린이청소년 도서관<br>통합유지관리</h4></a>
-                <div class="stack-items">
-                  <ul>
-                    <li>신청 이력 페이지 개발 및 사용자 조회 편의성 강화</li>                    
-                  </ul>
-                </div>
-              </div>
-              <div class="card">
-                <a href="javacsript:void(0);" onclick="openPopup('dlib')">
-                <h4>국립중앙도서관 국가전자도서관<br>통합유지관리</h4></a>
-                <div class="stack-items">
-                  <ul>
-                    <li>Solr 기반 통합 검색 기능 유지보수 및 메타데이터 처리 로직 대응</li>                    
-                  </ul>
-                </div>
-              </div>
-              <div class="card">
-                <a href="javacsript:void(0);" onclick="openPopup('nlnk')">
-                <h4 style="font-size: 0.9rem;">국립중앙도서관 국가지식자원공유서비스<br>통합유지관리</h4></a>
-                <div class="stack-items">
-                  <ul>
-                    <li>사용자 민원 대응 및 오류 분석 지원</li>
-                  </ul>
-                </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-badge career">Career</span>
+                <h4>나라원시스템</h4>
+                <span class="timeline-date">2025.09 ~ </span>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="skills" class="section">
-    <div class="container">      
-      <h3>Stacks</h3>          
-          <hr style="margin: 1rem 0; border: none; border-top: 1px solid #ccc;" />
-          <div class="stack-grid-2col">
-  <!-- Left Column -->
-  <div class="stack-col">
-    <!-- 언어 -->
-    <div class="stack-category">
-      <h4>Language</h4>
-    </div>
-    <div class="stack-items">
-      <ul>
-        <li><img src="./Develope_skill_icon/Java-Light.svg"> Java</li>
-        <li><img src="./Develope_skill_icon/JavaScript.svg"> JavaScript</li>
-        <li><img src="./Develope_skill_icon/TypeScript.svg"> TypeScript (기초)</li>
-        <li><img src="./Develope_skill_icon/Python-Light.svg"> Python (기초)</li>
-        <li><img src="./Develope_skill_icon/Kotlin-Light.svg"> Kotlin (학습 중)</li>
-      </ul>
-    </div>
-    <!-- Front-End -->
-    <div class="stack-category">
-      <h4>Front-End</h4>
-    </div>
-    <div class="stack-items">
-      <ul>        
-        <li><img src="./Develope_skill_icon/HTML.svg"> HTML </li>
-        <li><img src="./Develope_skill_icon/CSS.svg"> CSS</li> 
-        <li><img src="./Develope_skill_icon/JQuery.svg">jQuery</li>
-        <li>JSP, Thymeleaf</li>
-        <li><img src="./Develope_skill_icon/React-Light.svg"> React.js (기초)</li>
-        <li><img src="./Develope_skill_icon/Vue.svg"> Vue.js (학습중)</li>
-      </ul>
+  <!-- Popup -->
+  <div id="popupLayer" class="popup-layer" style="display: none;">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <button class="popup-close" onclick="closePopup()">&times;</button>
+      <div id="popupBody"></div>
     </div>
   </div>
-  <!-- Right Column -->
-  <div class="stack-col">
-    <!-- Back-End -->
-    <div class="stack-category">
-      <h4>Back-End / Framework</h4>
-    </div>
-    <div class="stack-items">
-      <ul>
-        <li><img src="./Develope_skill_icon/Spring-Light.svg"> Spring / eGovFramework</li>
-        <li>MyBatis</li>        
-      </ul>
-    </div>
-    <!-- DB -->
-    <div class="stack-category">
-      <h4>DB</h4>
-    </div>
-    <div class="stack-items">
-      <ul>
-        <li>Oracle · Cubrid</li>
-        <li>Tibero</li>
-      </ul>
-    </div>
-    <!-- DevOps -->
-    <div class="stack-category">
-      <h4>DevOps / Infra</h4>
-    </div>
-    <div class="stack-items">
-      <ul>
-        <li><img src="./Develope_skill_icon/Git.svg">Git</li>
-        <li>SVN</li>
-        <li>Jboss</li>
-        <li><img src="./Develope_skill_icon/Docker.svg"> Docker (학습중)</li>        
-      </ul>
-    </div>
-    <!-- OS -->
-    <div class="stack-category">
-      <h4>OS</h4>
-    </div>
-    <div class="stack-items">
-      <ul>
-        <li><img src="./Develope_skill_icon/Linux-Light.svg">Linux (Ubuntu)</li>
-        <li>Windows</li>
-      </ul>
-    </div>
-  </div>
-</div>
-</section>
-
-
-        
-        
-        <section id="profile" class="section">        
-            <div class="container profile-wrapper">
-              <!-- 좌측: 사진 -->
-              <div class="profile-photo">
-                <img class="img" src="profile.jpg" alt="Profile Photo" />
-              </div>
-          
-              <!-- 우측: Contact & Education -->
-              <div class="profile-info">
-                <h3>profile</h3>
-                <hr />
-                <ul class="contact-list">
-                  <li><strong><span class="pt50">name</span></strong> | 유승표</li>
-                  <li><strong><span class="pt50">birth</span></strong> | 1995.05.15</li>
-                  
-                  <li><strong><span class="pt50">Telephone</span></strong> | <a href="tel:010-2567-9634">010-2567-9634</a></li>
-                  <li><strong><span class="pt50">Email</span></strong> | ryusp0515@naver.com</li>
-                  <li><strong><span class="pt50">Github</span></strong> | <a href="https://github.com/ryu9634" target="_blank">https://github.com/ryu9634</a></li>
-                 
-                </ul>
-          
-                <h3 style="margin-top: 2rem;">🎓 Education</h3>
-                <div class="edu-item">
-                  <strong>서울사이버대학교</strong><br />
-                  <span>2021. 03 ~ 2025. 08 (졸업예정)</span>
-                </div>
-
-                <h3 style="margin-top: 2rem;">🎓 Career</h3>
-                <div class="edu-item">
-                  <strong>랜드소프트</strong><br />
-                  <span>2022. 04 ~ 재직중</span>
-                </div>
-                <!-- <div class="edu-item">
-                  <strong>코리아IT아카데미</strong><br />
-                  <span>2021. 11 ~ 2022. 04</span><br />
-                  <small>
-                    (AI활용 소프트웨어 개발 <br />
-                    JAVA, ORACLE, MYSQL, SPRING, SPRING BOOT, HTML/CSS/JS 등)
-                  </small>
-                </div> -->
-              </div>
-            </div>
-          </section>
-          
-
-    
-
-    
-
-<!-- 레이어 팝업 -->
-<!-- 팝업 레이어 (비어있는 상태) -->
-<div id="popupLayer" class="popup-layer" style="display: none;">
-  <div class="popup-content">
-    <span class="popup-close" onclick="closePopup()">×</span>
-    <div id="popupBody"><!-- JS가 여기에 내용 삽입 --></div>
-  </div>
-</div>
-
-
 
   <footer>
     <div class="container">
-      <small>© 2025 SeungPyo. All rights reserved.</small>
+      <p class="footer-text">SeungPyo Ryu &mdash; Portfolio 2025</p>
     </div>
   </footer>
+
+  <script src="common.js"></script>
 </body>
 </html>
-

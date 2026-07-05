@@ -129,28 +129,84 @@ const projects = [
     ]
   },
  {
-    id: "seongdong",
-    title: "성동구청 시스템 유지보수",
-    period: "2025년 9월 ~ ",
-    stack: "Java, Spring MVC, Tibero, MySQL, JSP, MyBatis, eGovFramework",
+    id: "seongdong-main",
+    title: "성동구청 대표홈페이지 운영·고도화",
+    period: "2025년 9월 ~ 현재",
+    stack: "Java, Spring MVC, 전자정부프레임워크(eGov) 3.9.0, iBatis, Tibero, JSP/FreeMarker, jQuery, Apache POI",
     description: [
-      "성동구청 홈페이지 및 관련 시스템 운영·유지보수 수행",
-      "기부·나눔 관리, 뉴스레터, 예약 캘린더 등 구민 대상 서비스 기능 개발 및 개선"
+      "서울 성동구청 대표홈페이지(www.sd.go.kr) 및 산하 서비스의 개발·운영 담당",
+      "신규 업무 시스템 구축 및 사이트 전반의 안정성·보안 운영"
     ],
     roles: [
-      "성동원플러스원 기부·나눔 관리 시스템 개발: 모바일 QR 기반 기부 등록, 관리자 CRUD, 통계 대시보드 및 Excel 출력 기능 구현",
-      "뉴스레터 관리 시스템 개발: 오디오 파일 연동, 커스텀 오디오 플레이어 UI 구현 및 JSP 코드 리팩토링",
-      "예약 캘린더 시스템 유지보수: 공휴일 표시·비활성화 로직, JSP/JSTL 조건 필터링, Google Translate 다국어 지원 연동",
-      "IE 호환 컬러피커 구현 및 크로스브라우저 오디오 재생 처리"
+      "성동원플러스원(기부·나눔 관리 시스템) 신규 개발: 공개 신청 화면부터 관리자 CRUD, 통계, 엑셀 출력까지 전 구간 설계·구현",
+      "지역 상점의 기부금을 적립해 취약계층 나눔으로 매칭·집행하는 업무 시스템 구축",
+      "참여업체 기부 등록(업체코드 검증·일련번호 자동채번), 기부/나눔 내역 관리 개발",
+      "동별·업체별·기간별 다차원 통계 및 차트, Apache POI 기반 엑셀 다운로드 개발",
+      "로그인 사용자의 소속 행정동 데이터만 접근하도록 강제하는 데이터 접근제어 로직 구현"
     ],
     maintenance: [
-      "운영 중 발생하는 오류 수정 및 민원 기반 기능 개선 대응",
-      "구청 요구사항 변경에 따른 UI·로직 수정 및 배포 대응"
+      "외부 웹취약점 점검(NileSOFT WebSCAN) 지적 16개 항목을 전수 검토·조치",
+      "실제 위험 항목(XSS·HTTP 파라미터 오염 등)은 입력값 검증으로 차단, 오탐은 코드 구조 분석으로 근거와 함께 소명하여 불필요한 수정 없이 점검 종료",
+      "특정 조건에서만 재현되는 조회·트랜잭션 장애의 근본 원인을 추적·해결하여 서비스 안정성 개선"
     ],
     results: [
-      "구민 대상 서비스의 안정적 운영 및 실사용 중심 기능 개선 경험 축적",
-      "레거시 환경(JSP, MyBatis, Tibero)에서 신규 기능을 안정적으로 개발·통합하는 역량 강화",
-      "공공기관 시스템 특성에 맞는 요구사항 분석 및 빠른 대응 능력 향상"
+      "신규 업무 시스템을 기획부터 구현·운영까지 단독으로 완성한 경험 확보",
+      "웹 보안 점검 대응 및 근본 원인 기반 장애 해결 역량 강화",
+      "전자정부프레임워크·iBatis·Tibero 기반 공공 시스템 개발 역량 확보"
+    ]
+  },
+  {
+    id: "seongdong-reserve",
+    title: "성동구청 신속예약 서비스",
+    period: "2025년 9월 ~ 현재",
+    stack: "Java, Spring MVC, 전자정부프레임워크(eGov) 3.9.0, iBatis, Tibero, JSP, jQuery",
+    description: [
+      "복지·교육 온라인 예약 서비스 개발·운영",
+      "생활서비스·교육강좌 예약의 신청/자격검증/대기자 관리 로직 담당"
+    ],
+    roles: [
+      "임산부 가사돌봄 등 복지사업의 신청 자격을 서버단에서 자동 검증하는 로직을 구축하여 부적격·중복 신청을 사전 차단하고 담당 부서의 수기 확인 부담 경감",
+      "다인원(가족) 신청 확대에 대응해 대기자 자동승계 방식을 개선, 예약 취소·승계 과정의 누락과 오류를 해소"
+    ],
+    maintenance: [],
+    results: [
+      "자격검증 자동화로 담당 부서 운영 부담 경감 및 예약 서비스 신뢰성 향상"
+    ]
+  },
+  {
+    id: "seongdong-news",
+    title: "성동뉴스(전자 소식지) 모듈 개발",
+    period: "2025년 9월 ~ 현재",
+    stack: "Java, Spring MVC, 전자정부프레임워크(eGov) 3.9.0, iBatis, Tibero, JSP/FreeMarker, jQuery",
+    description: [
+      "전자 소식지(뉴스레터) 모듈 신규 개발",
+      "기존 게시판 기반 소식지를 대체하는 웹 발행형 전자 소식지 전용 모듈 신규 구축"
+    ],
+    roles: [
+      "호수(VOL)별로 다수 기사 블록(이미지·설명·링크)을 담아 발행하고, 사용자 화면에서 최신호 자동 노출 및 이전/다음호 열람이 가능하도록 구현",
+      "표출일자 기반 예약 노출, 표시여부/논리삭제, 호수 중복 검증, 관리자 미리보기 등 운영 편의 기능을 갖춘 관리자 콘텐츠 관리 기능 개발"
+    ],
+    maintenance: [],
+    results: [
+      "콘텐츠 담당자가 개발 없이 운영 가능한 발행형 콘텐츠 관리 모듈 구축 경험 확보"
+    ]
+  },
+  {
+    id: "seongdong-mayor",
+    title: "성동구청 구청장실 사이트 전면 리뉴얼",
+    period: "2025년 9월 ~ 현재",
+    stack: "Java, Spring MVC, 전자정부프레임워크(eGov) 3.9.0, iBatis, Tibero, JSP/FreeMarker, jQuery",
+    description: [
+      "구청장실 사이트를 신규 디자인으로 전면 개편",
+      "정적 시안을 CMS 기반 동적 사이트로 이관 구축"
+    ],
+    roles: [
+      "CMS 동적 메뉴·게시판을 신규 UI에 연동하여 콘텐츠 담당자가 별도 개발 없이 운영 가능하도록 구성",
+      "IE 등 구형 브라우저 호환성까지 확보하여 공공사이트 접근성 요건 충족"
+    ],
+    maintenance: [],
+    results: [
+      "정적 시안의 CMS 기반 동적 사이트 이관 및 접근성 준수 리뉴얼 경험 확보"
     ]
   },
   {
@@ -182,11 +238,11 @@ const projects = [
   },
   {
     id: "printPP",
-    title: "예술인 포트폴리오 웹사이트 개발",
+    title: "포트폴리오 웹사이트 개발",
     period: "2025년 (개인 사이드 프로젝트)",
     stack: "HTML, CSS, Vanilla JS, Quill.js, Java, Spring Boot, REST API, AWS (EC2)",
     description: [
-      "전시 작업을 위주로 활동하는 예술인 친구의 개인 포트폴리오 웹사이트 기획 및 개발",
+      "전시 작업을 위주로 활동하는 친구의 개인 포트폴리오 웹사이트 기획 및 개발",
       "작품 갤러리 및 프로젝트 소개 기능을 중심으로 예술 작품을 효과적으로 전시할 수 있는 UI 구성",
       "Spring Boot 기반 백엔드와 REST API로 연동하여 콘텐츠 관리 기능 구현"
     ],
@@ -235,6 +291,65 @@ const projects = [
       "외부 금융 API 연동 및 실시간 데이터 처리 역량 강화",
       "자동화 시스템의 안정성 확보를 위한 예외처리 및 로깅 설계 경험"
     ]
+  },
+  {
+    id: "damso-match",
+    title: "담소혼술바 호감도 매칭 시스템(바이브코딩)",
+    period: "2026년 (개인 사이드 프로젝트)",
+    stack: "Java 21, Spring Boot, JPA(Hibernate), H2, React 18, TypeScript, Vite, Tailwind CSS",
+    summary: "오프라인 소개팅 이벤트의 좌석 배치를 <b>이분 그래프 최대 가중치 매칭 문제로 정형화</b>하고, MBTI 궁합·가치관 유사도를 결합한 100점 스코어링 엔진으로 최적 좌석을 자동 산출. 소규모 데이터 특성을 활용한 완전탐색으로 <b>최적해를 보장</b>하고, 상호 지목 우선순위를 지수 가중치로 표현한 1인 풀스택 프로젝트.",
+    description: [
+      "매장 내 소규모(최대 18명, 9남 9여) 호감도 기반 매칭 이벤트를 운영하는 실전 서비스",
+      "‘사람을 어떻게 최적으로 짝지을 것인가’를 실제 알고리즘으로 풀어낸 것이 핵심",
+      "관리자는 PC로 단계를 진행하고, 손님은 휴대폰으로 자리 확인·호감도 지목·메시지 전송을 진행하는 실시간 연동 구조"
+    ],
+    roles: [
+      "백엔드·프론트·DB·배포 전 영역을 1인 개발 (Spring Boot + React + H2 → 단일 JAR 배포)",
+      "등록 → 자리 배치(3라운드) → 호감도 지목 → 메시지 → 종료의 7단계 이벤트 운영 흐름 구현",
+      "관리자(PC)·손님(모바일) 화면 분리 및 자리 배치도 UI(수동 보정 포함) 구현"
+    ],
+    extra: [
+      {
+        title: "핵심 알고리즘 · 최적 좌석 배치 (이분 그래프 최대 가중치 매칭)",
+        items: [
+          "‘남녀를 궁합 좋은 순으로 옆자리에 앉힌다’는 요구사항을 고전적 할당 문제(Assignment Problem)로 정형화 — 남성 N명 × 여성 M명을 노드, 쌍별 궁합 점수를 간선 가중치로 하는 이분 그래프 최대 가중치 완전 매칭",
+          "좌석이 최대 9석(n ≤ 9)인 소규모 특성을 활용해 순열 완전탐색으로 근사가 아닌 정확한 최적해(exact optimum)를 보장 — 헝가리안 알고리즘(O(n³))의 구현 복잡도 대신 문제 규모에 맞는 실용적 도구 선택",
+          "제약을 ‘점수 하나’로 표현: 이전 라운드 좌석 회피는 -1e15 소프트 페널티, 동점 무한 편향 방지는 미세 노이즈 타이브레이킹, 자리별 성별 슬롯 반전은 로직에 흡수"
+        ]
+      },
+      {
+        title: "3단계 라운드 전략 에스컬레이션",
+        items: [
+          "1차 — 손님이 입력한 좌석 그대로 초기 배치",
+          "2차 — 여성 위치 고정 + 남성만 궁합 점수 최대화로 재배치(이전 자리 회피)",
+          "3차 — 상호 지목 관계를 4개 티어로 나눠 1000^(tier-1) 지수 가중치 부여 (쌍방 1순위 → 1·2순위 교차/쌍방 2순위 → 단방 지목 → 미지목)",
+          "지수 간격으로 ‘상위 티어 1쌍이 하위 티어 몇 쌍을 합쳐도 무조건 우선’되는 사전식 순서(lexicographic ordering)를 단일 점수 하나로 표현",
+          "점수 행렬 구성만 라운드별로 바꾸고 완전탐색 코어는 공유 — 하나의 엔진을 재사용하는 설계"
+        ]
+      },
+      {
+        title: "도메인 점수 엔진 · MBTI × 가치관 (100점 만점)",
+        items: [
+          "MBTI 궁합(20점): 직접 설계한 16×16 매트릭스로 조합별 점수 산정",
+          "가치관 일치(80점): 설문 응답을 비트열로 저장하고 문자 단위 일치율을 활성 문항 수에 비례해 정규화",
+          "매칭 불가·미입력 시 fallback 처리 등 방어적 설계"
+        ]
+      },
+      {
+        title: "아키텍처 & 운영 관점 의사결정",
+        items: [
+          "풀스택 단일 배포: 백엔드가 React 빌드 결과물 정적 서빙 → 단일 JAR 배포",
+          "DB 선택: H2 파일 모드 + AUTO_SERVER + PostgreSQL 호환 모드로 별도 DB 서버 없이 현장 운영하되, 추후 PostgreSQL 이전이 쉬운 마이그레이션 경로 확보",
+          "경량 실시간 동기화: WebSocket 없이 localStorage 세션 + 4초 폴링으로 좌석/상태 반영, 이벤트 교체 시 세션 자동 무효화",
+          "현장 UX 디테일: QR 온보딩(qrcode.react), 좌석 셀 폭에 맞춘 닉네임 가변 폰트 스케일링"
+        ]
+      }
+    ],
+    results: [
+      "이분 매칭·완전탐색 등 알고리즘을 실제 도메인 문제에 적용해 최적해를 보장하는 설계 경험 확보",
+      "제약·동점·우선순위를 단일 스코어로 표현하는 모델링 역량(페널티 · 미세 노이즈 · 지수 가중치) 강화",
+      "기획부터 배포까지 1인 풀스택으로 실서비스를 완성하고, 기술적 의사결정을 근거와 함께 설명할 수 있는 경험 축적"
+    ]
   }
 ];
 
@@ -243,23 +358,29 @@ function openPopup(projectId) {
   const project = projects.find(p => p.id === projectId);
   if (!project) return;
 
+  const section = (title, items) =>
+    (items && items.length)
+      ? `<h4>${title}</h4><ul>${items.map(item => `<li>${item}</li>`).join("")}</ul>`
+      : "";
+
+  const summary = project.summary
+    ? `<p class="popup-summary">${project.summary}</p>`
+    : "";
+
+  const extra = (project.extra || []).map(s => section(s.title, s.items)).join("");
+
   const body = document.getElementById("popupBody");
   body.innerHTML = `
     <h3>${project.title}</h3>
     <p><span class="popup-meta">${project.period}</span></p>
     <p><span class="popup-meta">${project.stack}</span></p>
+    ${summary}
 
-    <h4>프로젝트 설명</h4>
-    <ul>${project.description.map(item => `<li>${item}</li>`).join("")}</ul>
-
-    <h4>담당 역할</h4>
-    <ul>${project.roles.map(item => `<li>${item}</li>`).join("")}</ul>
-
-    <h4>유지보수</h4>
-    <ul>${project.maintenance.map(item => `<li>${item}</li>`).join("")}</ul>
-
-    <h4>프로젝트 수행결과</h4>
-    <ul>${project.results.map(item => `<li>${item}</li>`).join("")}</ul>
+    ${section("프로젝트 설명", project.description)}
+    ${section("담당 역할", project.roles)}
+    ${extra}
+    ${section("유지보수", project.maintenance)}
+    ${section("프로젝트 수행결과", project.results)}
   `;
 
   document.getElementById("popupLayer").style.display = "flex";

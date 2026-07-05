@@ -89,63 +89,116 @@
   <section id="projects" class="section section-alt">
     <div class="container">
       <h3 class="section-title reveal">Projects</h3>
-      <div class="projects-grid">
-        <div class="project-card reveal" onclick="openPopup('stat')">
-          <div class="project-number">01</div>
-          <h4>국립중앙도서관<br>통계자료시스템</h4>
-          <p>업무일지, 월간/분기 통계 입력, <br>조회 화면 개발 및 대시보드 페이지 구현</p>
-          <span class="project-more">자세히 보기 &rarr;</span>
+      <p class="section-lead reveal">경력과 사이드 프로젝트를 시간 순으로 정리했습니다.<br>프로젝트를 클릭하면 상세 내용을 확인할 수 있어요.</p>
+
+      <div class="career-timeline">
+        <!-- Education -->
+        <div class="ct-node reveal">
+          <span class="ct-marker"></span>
+          <div class="ct-body">
+            <div class="ct-head">
+              <span class="ct-badge edu">Education</span>
+              <span class="ct-date">2021.11</span>
+            </div>
+            <h4 class="ct-org">Korea IT 아카데미 교육 수료</h4>
+            <p class="ct-role">웹 개발(Java · Spring · 프론트엔드) 기반 국비 교육 과정 수료</p>
+          </div>
         </div>
-        <div class="project-card reveal" onclick="openPopup('nl')">
-          <div class="project-number">02</div>
-          <h4>국립중앙도서관<br>정보서비스</h4>
-          <p>국립중앙도서관 포털 및 서비스 시스템 전반에 <br>대한 운영 유지보수 수행</p>
-          <span class="project-more">자세히 보기 &rarr;</span>
+
+        <!-- 랜드소프트 -->
+        <div class="ct-node reveal">
+          <span class="ct-marker"></span>
+          <div class="ct-body">
+            <div class="ct-head">
+              <span class="ct-badge career">Career</span>
+              <span class="ct-date">2022.04 — 2025.09</span>
+            </div>
+            <h4 class="ct-org">랜드소프트</h4>
+            <p class="ct-role">국립중앙도서관 등 공공 도서관·지식정보 시스템 구축 및 통합유지관리</p>
+            <div class="ct-items">
+              <button class="ct-item" onclick="openPopup('stat')">
+                <span class="ct-item-title">국립중앙도서관 통계자료시스템</span>
+                <span class="ct-item-desc">업무일지·월간/분기 통계 입력·조회 화면 및 시각화 대시보드 구현</span>
+              </button>
+              <button class="ct-item" onclick="openPopup('nl')">
+                <span class="ct-item-title">국립중앙도서관 정보서비스</span>
+                <span class="ct-item-desc">포털·서비스 시스템 전반 운영 유지보수 및 민원 대응</span>
+              </button>
+              <button class="ct-item" onclick="openPopup('nlcy')">
+                <span class="ct-item-title">국립어린이청소년도서관</span>
+                <span class="ct-item-desc">프로그램 신청 로직 개선 및 신청 이력·조회 편의성 강화</span>
+              </button>
+              <button class="ct-item" onclick="openPopup('dlib')">
+                <span class="ct-item-title">국가전자도서관</span>
+                <span class="ct-item-desc">Solr 기반 통합 검색 유지보수 및 메타데이터 처리 로직 대응</span>
+              </button>
+              <button class="ct-item" onclick="openPopup('nlnk')">
+                <span class="ct-item-title">국가지식자원공유서비스</span>
+                <span class="ct-item-desc">협약기관 관리 기능 유지보수 및 통합뷰어 오류 분석 지원</span>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="project-card reveal" onclick="openPopup('nlcy')">
-          <div class="project-number">03</div>
-          <h4>국립어린이청소년<br>도서관</h4>
-          <p>신청 이력 페이지 개발 및 사용자 조회 편의성 <br>강화</p>
-          <span class="project-more">자세히 보기 &rarr;</span>
+
+        <!-- 나라원시스템 -->
+        <div class="ct-node reveal">
+          <span class="ct-marker"></span>
+          <div class="ct-body">
+            <div class="ct-head">
+              <span class="ct-badge career">Career</span>
+              <span class="ct-date">2025.09 — 현재</span>
+            </div>
+            <h4 class="ct-org">나라원시스템</h4>
+            <p class="ct-role">성동구청 통합홈페이지(www.sd.go.kr) 운영·고도화 · 대표홈페이지 · 신속예약 · 성동뉴스 · 구청장실</p>
+            <div class="ct-items">
+              <button class="ct-item" onclick="openPopup('seongdong-main')">
+                <span class="ct-item-title">대표홈페이지 운영·고도화</span>
+                <span class="ct-item-desc">성동원플러스원 기부·나눔 관리 시스템 신규 개발 및 웹취약점 점검 대응</span>
+              </button>
+              <button class="ct-item" onclick="openPopup('seongdong-reserve')">
+                <span class="ct-item-title">신속예약 서비스</span>
+                <span class="ct-item-desc">복지·교육 예약의 자격검증 자동화 및 대기자 자동승계 개선</span>
+              </button>
+              <button class="ct-item" onclick="openPopup('seongdong-news')">
+                <span class="ct-item-title">성동뉴스(전자 소식지)</span>
+                <span class="ct-item-desc">웹 발행형 전자 소식지 전용 모듈 신규 개발</span>
+              </button>
+              <button class="ct-item" onclick="openPopup('seongdong-mayor')">
+                <span class="ct-item-title">구청장실 사이트 리뉴얼</span>
+                <span class="ct-item-desc">정적 시안을 CMS 기반 동적 사이트로 전면 이관·개편</span>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="project-card reveal" onclick="openPopup('dlib')">
-          <div class="project-number">04</div>
-          <h4>국가전자도서관</h4>
-          <p>Solr 기반 통합 검색 기능 유지보수 및 <br>메타데이터 처리 로직 대응</p>
-          <span class="project-more">자세히 보기 &rarr;</span>
-        </div>
-        <div class="project-card reveal" onclick="openPopup('nlnk')">
-          <div class="project-number">05</div>
-          <h4>국가지식자원<br>공유서비스</h4>
-          <p>사용자 민원 대응 및 오류 분석 지원</p>
-          <span class="project-more">자세히 보기 &rarr;</span>
-        </div>
-        <div class="project-card reveal" onclick="openPopup('seongdong')">
-          <div class="project-number">06</div>
-          <h4>성동구청<br>시스템 유지보수</h4>
-          <p>성동구청 관련 시스템 운영 및 유지보수 수행</p>
-          <span class="project-more">자세히 보기 &rarr;</span>
-        </div>
-        <div class="project-card reveal" onclick="openPopup('surge-predictor')">
-          <span class="project-badge side">Side Project</span> <span class="project-badge vibe">Vibe Coding</span> 
-          <div class="project-number">07</div>
-          <h4>주식 급등 예측<br>자동화 시스템</h4>
-          <p>Python + GitHub Actions 기반 급등 종목 분석 및 텔레그램 알림 자동화</p>
-          <span class="project-more">자세히 보기 &rarr;</span>
-        </div>
-        <div class="project-card reveal" onclick="openPopup('printPP')">
-          <span class="project-badge side">Side Project</span>
-          <div class="project-number">08</div>
-          <h4>예술인 포트폴리오<br>웹사이트(진행중)</h4>
-          <p>Spring Boot + Vanilla JS 기반 예술인 작품 갤러리 및 포트폴리오 사이트 개발</p>
-          <span class="project-more">자세히 보기 &rarr;</span>
-        </div>
-        <div class="project-card reveal" onclick="openPopup('upbit-auto')">
-          <span class="project-badge side">Side Project</span> <span class="project-badge vibe">Vibe Coding</span> 
-          <div class="project-number">09</div>
-          <h4>업비트 알고리즘<br>자동매매 시스템</h4>
-          <p>Python + Google Cloud 기반 암호화폐 자동매매 봇 개발 및 24시간 자동 운영</p>
-          <span class="project-more">자세히 보기 &rarr;</span>
+
+        <!-- Side Projects -->
+        <div class="ct-node reveal">
+          <span class="ct-marker side"></span>
+          <div class="ct-body">
+            <div class="ct-head">
+              <span class="ct-badge side">Side Project</span>
+            </div>
+            <h4 class="ct-org">개인 사이드 프로젝트</h4>
+            <p class="ct-role">업무 외 관심 분야를 직접 기획부터 배포까지 구현한 프로젝트</p>
+            <div class="ct-items">
+              <!-- <button class="ct-item" onclick="openPopup('surge-predictor')">
+                <span class="ct-item-title">주식 급등 예측 자동화 시스템</span>
+                <span class="ct-item-desc">Python + GitHub Actions 기반 급등 종목 분석 및 텔레그램 알림 자동화</span>
+              </button> -->
+              <button class="ct-item" onclick="openPopup('printPP')">
+                <span class="ct-item-title">포트폴리오 웹사이트</span>
+                <span class="ct-item-desc">Spring Boot + Vanilla JS 기반 예술인 작품 갤러리·포트폴리오 사이트</span>
+              </button>
+              <button class="ct-item" onclick="openPopup('upbit-auto')">
+                <span class="ct-item-title">업비트 자동매매 시스템</span>
+                <span class="ct-item-desc">Python + Google Cloud 기반 암호화폐 자동매매 봇 24시간 무중단 운영</span>
+              </button>
+              <button class="ct-item" onclick="openPopup('damso-match')">
+                <span class="ct-item-title">담소혼술바 매칭 시스템</span>
+                <span class="ct-item-desc">좌석 배치를 이분 그래프 최대 가중치 매칭으로 정형화한 1인 풀스택 매칭 서비스</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

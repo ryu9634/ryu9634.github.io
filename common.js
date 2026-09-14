@@ -128,7 +128,7 @@ const projects = [
   },
   {
     id: "seongdong-main",
-    title: "성동플러스원 (기부·나눔 플랫폼) 신규 구축",
+    title: "성동 플러스원 (기부·나눔 플랫폼) 신규 구축",
     period: "2025년 9월 ~ 현재",
     stack: "Java, Spring MVC, eGovFramework 3.9.0, MyBatis, Tibero, JSP/FreeMarker, jQuery, Apache POI",
     description: [
@@ -375,32 +375,6 @@ const projects = [
       "서버 구성부터 도메인·SSL까지 배포 전 과정을 직접 수행한 인프라 운영 경험 확보",
       "Spring Boot · JPA · Spring Security 기반 서비스를 단독으로 설계·구현한 경험",
       "실사용자와 직접 소통하며 요구사항을 반영하는 협업 경험"
-    ]
-  },
-  {
-    id: "upbit-auto",
-    title: "업비트 알고리즘 자동매매 시스템",
-    period: "2026년 (개인 사이드 프로젝트)",
-    stack: "Python, Upbit API, Google Cloud Functions, Google Cloud Scheduler",
-    description: [
-      "업비트 거래소 API를 활용한 암호화폐 알고리즘 자동매매 프로그램 개발",
-      "기술적 분석 지표 기반 매수/매도 전략을 자동으로 실행하는 트레이딩 봇 구현",
-      "Google Cloud에 배포하여 24시간 무중단 자동 운영"
-    ],
-    roles: [
-      "업비트 REST API 연동 및 주문/잔고 조회 로직 구현",
-      "기술적 분석 기반 자동 매수/매도 알고리즘 설계 및 개발",
-      "Google Cloud Functions + Cloud Scheduler를 활용한 자동 실행 환경 구성",
-      "실시간 시세 모니터링 및 조건 충족 시 자동 주문 처리"
-    ],
-    maintenance: [
-      "매매 전략 파라미터 튜닝 및 수익률 분석을 통한 지속 개선",
-      "API 응답 예외처리 및 장애 상황 대응 로직 보완"
-    ],
-    results: [
-      "서버리스 아키텍처 배포 및 운영 경험 확보",
-      "외부 금융 API 연동 및 실시간 데이터 처리 역량 강화",
-      "자동화 시스템의 안정성 확보를 위한 예외처리 및 로깅 설계 경험"
     ]
   }
 ];

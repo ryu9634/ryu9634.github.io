@@ -1,0 +1,4 @@
+# skills (npx skills add) — 로컬 도구이므로 사이트 소스와 분리
+.agents/
+.claude/
+skills-lock.json

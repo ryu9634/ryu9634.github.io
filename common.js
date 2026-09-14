@@ -393,8 +393,32 @@ function closePopup() {
   document.body.style.overflow = "";
 }
 
+// ===== Career Length =====
+// 시작 연월(data-career-start)부터 오늘까지를 매번 계산해 수동으로 고칠 필요가 없게 한다.
+function renderCareerLength() {
+  var el = document.getElementById("careerLength");
+  if (!el) return;
+
+  var start = (el.dataset.careerStart || "").split("-");
+  var startYear = parseInt(start[0], 10);
+  var startMonth = parseInt(start[1], 10);
+  if (!startYear || !startMonth) return;
+
+  var now = new Date();
+  var months = (now.getFullYear() - startYear) * 12 + (now.getMonth() + 1 - startMonth);
+  if (months < 0) return;
+
+  var years = Math.floor(months / 12);
+  var rest = months % 12;
+  var label = years ? years + "\uB144" + (rest ? " " + rest + "\uAC1C\uC6D4" : "") : rest + "\uAC1C\uC6D4";
+
+  el.textContent = "\uC6F9 \uAC1C\uBC1C " + label + " (" + startYear + "." + start[1] + " ~ \uD604\uC7AC)";
+}
+
 // ===== DOM Ready =====
 document.addEventListener("DOMContentLoaded", function () {
+  renderCareerLength();
+
   // Close popup on backdrop click
   const popup = document.getElementById("popupLayer");
   popup.addEventListener("click", function () {

@@ -835,6 +835,123 @@ nav a:hover {
   font-weight: 700;
 }
 
+/* ===== Career position / award ===== */
+.ct-position {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-left: 0.4rem;
+}
+
+.ct-position::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 0.8em;
+  background: var(--bg-alt);
+  margin-right: 0.5rem;
+  vertical-align: -0.05em;
+}
+
+.ct-award {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #92400e;
+  background: #fef3c7;
+  padding: 0.15rem 0.6rem;
+  border-radius: 5px;
+  margin-bottom: 0.6rem;
+}
+
+.ct-award::before {
+  content: '\1F396';
+  margin-right: 0.3rem;
+}
+
+/* ===== Profile extra (자격증 등) ===== */
+.profile-extra {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--bg-alt);
+}
+
+.profile-extra-title {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+.profile-extra-list {
+  list-style: none;
+}
+
+.profile-extra-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.45rem 0;
+  font-size: 0.92rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--bg-alt);
+}
+
+.profile-extra-list li:last-child {
+  border-bottom: none;
+}
+
+.profile-extra-list em {
+  font-style: normal;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-left: 0.35rem;
+}
+
+.profile-extra-date {
+  font-family: var(--font-en);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ===== Popup live links ===== */
+.popup-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.popup-links a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: #d8f3dc;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.popup-links a::before {
+  content: '\2197';
+  margin-right: 0.35rem;
+  font-weight: 700;
+}
+
+.popup-links a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
 /* ===== Footer ===== */
 footer {
   text-align: center;

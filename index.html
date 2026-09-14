@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>유승표 Portfolio</title>
-  <meta name="description" content="버들처럼 유연한 웹 개발자 유승표의 포트폴리오입니다." />
+  <meta name="description" content="공공 SI 백엔드 개발자 유승표의 포트폴리오입니다. 국립중앙도서관·성동구청 등 대형 공공 시스템을 설계·개발·운영해왔습니다." />
 
   <!-- Open Graph (카카오톡, 페이스북, 링크드인 등) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="유승표 - Web Developer Portfolio" />
+  <meta property="og:title" content="유승표 - Backend Developer Portfolio" />
   <meta property="og:description" content="버들처럼 유연하게. 흔들리더라도 꺾이지 않는 유승표입니다." />
   <meta property="og:image" content="https://ryu9634.github.io/og-image.png" />
   <meta property="og:url" content="https://ryu9634.github.io" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="유승표 - Web Developer Portfolio" />
+  <meta name="twitter:title" content="유승표 - Backend Developer Portfolio" />
   <meta name="twitter:description" content="버들처럼 유연하게. 흔들리더라도 꺾이지 않는 유승표입니다." />
   <meta name="twitter:image" content="https://ryu9634.github.io/og-image.png" />
 
@@ -44,7 +44,7 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <p class="hero-sub fade-up">WEB - Developer</p>
+      <p class="hero-sub fade-up">Public SI &middot; Backend Developer</p>
       <h2 class="hero-title fade-up delay-1">버들처럼<br><span class="accent">유연</span>하게</h2>
       <p class="hero-desc fade-up delay-2">흔들리더라도 꺾이지 않고 그 자리에 서 있는<br>버드나무가 되고 싶은 사람입니다.</p>
       <a href="#about" class="hero-cta fade-up delay-3">More About Me</a>
@@ -60,6 +60,9 @@
   <section id="about" class="section">
     <div class="container">
       <h3 class="section-title reveal">About Me</h3>
+      <p class="section-lead reveal">공공 SI 백엔드 개발자로 국립중앙도서관·성동구청 등 대형 공공 시스템을 설계·개발·운영해왔습니다.<br>
+      기능 구현에 그치지 않고 <b>시스템이 안정적으로 돌아가는 구조를 이해하고 책임지는 개발자</b>를 지향합니다.<br>
+      WAS·DB 운영, 검색엔진 색인 관리, 보안 취약점 조치, 서버 인프라 구성까지 서비스 전 구간을 다뤄본 경험이 있습니다.</p>
       <div class="about-grid">
         <div class="about-card reveal">
           <div class="about-icon">&#9889;</div>
@@ -98,10 +101,10 @@
           <div class="ct-body">
             <div class="ct-head">
               <span class="ct-badge edu">Education</span>
-              <span class="ct-date">2021.11</span>
+              <span class="ct-date">2021.11 — 2022.04</span>
             </div>
-            <h4 class="ct-org">Korea IT 아카데미 교육 수료</h4>
-            <p class="ct-role">웹 개발(Java · Spring · 프론트엔드) 기반 국비 교육 과정 수료</p>
+            <h4 class="ct-org">코리아IT아카데미</h4>
+            <p class="ct-role">AI활용 소프트웨어 개발 및 응용과정 수료 (Java · Spring · 프론트엔드)</p>
           </div>
         </div>
 
@@ -111,30 +114,31 @@
           <div class="ct-body">
             <div class="ct-head">
               <span class="ct-badge career">Career</span>
-              <span class="ct-date">2022.04 — 2025.09</span>
+              <span class="ct-date">2022.04 — 2025.09 · 3년 6개월</span>
             </div>
-            <h4 class="ct-org">랜드소프트</h4>
+            <h4 class="ct-org">랜드소프트 <span class="ct-position">ITO팀 매니저</span></h4>
+            <p class="ct-award">2024년 우수사원 선정</p>
             <p class="ct-role">국립중앙도서관 등 공공 도서관·지식정보 시스템 구축 및 통합유지관리</p>
             <div class="ct-items">
               <button class="ct-item" onclick="openPopup('stat')">
                 <span class="ct-item-title">국립중앙도서관 통계자료시스템</span>
-                <span class="ct-item-desc">업무일지·월간/분기 통계 입력·조회 화면 및 시각화 대시보드 구현</span>
+                <span class="ct-item-desc">신규 구축 — DB 설계, 통계 SQL 작성, amChart 기반 대시보드 구현</span>
               </button>
               <button class="ct-item" onclick="openPopup('nl')">
-                <span class="ct-item-title">국립중앙도서관 정보서비스</span>
-                <span class="ct-item-desc">포털·서비스 시스템 전반 운영 유지보수 및 민원 대응</span>
+                <span class="ct-item-title">국립중앙도서관 홈페이지</span>
+                <span class="ct-item-desc">SQL 튜닝·캐싱으로 응답 속도 개선, XSS·SQL Injection 등 보안 취약점 조치</span>
               </button>
               <button class="ct-item" onclick="openPopup('nlcy')">
                 <span class="ct-item-title">국립어린이청소년도서관</span>
-                <span class="ct-item-desc">프로그램 신청 로직 개선 및 신청 이력·조회 편의성 강화</span>
+                <span class="ct-item-desc">신규 게시판 단독 개발 및 운영, 프로그램 신청 로직 개선</span>
               </button>
               <button class="ct-item" onclick="openPopup('dlib')">
                 <span class="ct-item-title">국가전자도서관</span>
-                <span class="ct-item-desc">Solr 기반 통합 검색 유지보수 및 메타데이터 처리 로직 대응</span>
+                <span class="ct-item-desc">로그인 인증 설계, Solr 검색엔진 색인 관리 및 형태소 분석 최적화</span>
               </button>
               <button class="ct-item" onclick="openPopup('nlnk')">
                 <span class="ct-item-title">국가지식자원공유서비스</span>
-                <span class="ct-item-desc">협약기관 관리 기능 유지보수 및 통합뷰어 오류 분석 지원</span>
+                <span class="ct-item-desc">통합뷰어 민원 처리, 협약 도서관 권한 관리</span>
               </button>
             </div>
           </div>
@@ -148,24 +152,47 @@
               <span class="ct-badge career">Career</span>
               <span class="ct-date">2025.09 — 현재</span>
             </div>
-            <h4 class="ct-org">나라원시스템</h4>
-            <p class="ct-role">성동구청 통합홈페이지(www.sd.go.kr) 운영·고도화 · 대표홈페이지 · 신속예약 · 성동뉴스 · 구청장실</p>
+            <h4 class="ct-org">주식회사 나라원시스템 <span class="ct-position">웹사업부 대리</span></h4>
+            <p class="ct-role">성동구청 홈페이지(www.sd.go.kr) 및 민원 시스템 개발·운영</p>
             <div class="ct-items">
               <button class="ct-item" onclick="openPopup('seongdong-main')">
-                <span class="ct-item-title">대표홈페이지 운영·고도화</span>
-                <span class="ct-item-desc">성동원플러스원 기부·나눔 관리 시스템 신규 개발 및 웹취약점 점검 대응</span>
+                <span class="ct-item-title">성동플러스원 (기부·나눔 플랫폼)</span>
+                <span class="ct-item-desc">신규 시스템 전체 설계·개발 후 실서버 반영</span>
               </button>
               <button class="ct-item" onclick="openPopup('seongdong-reserve')">
-                <span class="ct-item-title">신속예약 서비스</span>
-                <span class="ct-item-desc">복지·교육 예약의 자격검증 자동화 및 대기자 자동승계 개선</span>
+                <span class="ct-item-title">신속예약 시스템</span>
+                <span class="ct-item-desc">대기자 자동승계·추첨 로직, 휴관일·공휴일 관리, 개인정보 파기 등 신규 기능 다수 추가</span>
               </button>
               <button class="ct-item" onclick="openPopup('seongdong-news')">
-                <span class="ct-item-title">성동뉴스(전자 소식지)</span>
-                <span class="ct-item-desc">웹 발행형 전자 소식지 전용 모듈 신규 개발</span>
+                <span class="ct-item-title">성동뉴스 (뉴스레터 CMS 이관)</span>
+                <span class="ct-item-desc">PHP 기반 구 서버 폐쇄에 따른 CMS 이관 · 음성파일 연동 · IE 대응 커스텀 플레이어</span>
               </button>
               <button class="ct-item" onclick="openPopup('seongdong-mayor')">
-                <span class="ct-item-title">구청장실 사이트 리뉴얼</span>
-                <span class="ct-item-desc">정적 시안을 CMS 기반 동적 사이트로 전면 이관·개편</span>
+                <span class="ct-item-title">구청장실 리뉴얼</span>
+                <span class="ct-item-desc">구청장 교체에 따른 구청장실 페이지 전면 UI 개편</span>
+              </button>
+              <button class="ct-item" onclick="openPopup('seongdong-etc')">
+                <span class="ct-item-title">기타 민원 시스템</span>
+                <span class="ct-item-desc">복지종합상담 신청폼, SD명예의전당 게시판, 보안 취약점 조치, DB 부하 대응</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 프로 캠프 -->
+        <div class="ct-node reveal">
+          <span class="ct-marker"></span>
+          <div class="ct-body">
+            <div class="ct-head">
+              <span class="ct-badge edu">Education</span>
+              <span class="ct-date">2026.09 — 2027.01 · 수강 중</span>
+            </div>
+            <h4 class="ct-org">스파르타클럽 프로 캠프</h4>
+            <p class="ct-role">백엔드 실무 설계 트랙 5기</p>
+            <div class="ct-items">
+              <button class="ct-item" onclick="openPopup('procamp')">
+                <span class="ct-item-title">백엔드 실무 설계 트랙</span>
+                <span class="ct-item-desc">DDD·MSA, Kafka 이벤트 아키텍처, Redis·동시성 제어, Docker·Kubernetes, ELK, 대용량 트래픽 처리</span>
               </button>
             </div>
           </div>
@@ -181,21 +208,17 @@
             <h4 class="ct-org">개인 사이드 프로젝트</h4>
             <p class="ct-role">업무 외 관심 분야를 직접 기획부터 배포까지 구현한 프로젝트</p>
             <div class="ct-items">
-              <!-- <button class="ct-item" onclick="openPopup('surge-predictor')">
-                <span class="ct-item-title">주식 급등 예측 자동화 시스템</span>
-                <span class="ct-item-desc">Python + GitHub Actions 기반 급등 종목 분석 및 텔레그램 알림 자동화</span>
-              </button> -->
+              <button class="ct-item" onclick="openPopup('damso-match')">
+                <span class="ct-item-title">담소 매칭 시스템</span>
+                <span class="ct-item-desc">이분 그래프 최대 가중치 매칭 기반 자동 자리 배치 · 1인 풀스택 운영 서비스</span>
+              </button>
               <button class="ct-item" onclick="openPopup('printPP')">
-                <span class="ct-item-title">포트폴리오 웹사이트</span>
-                <span class="ct-item-desc">Spring Boot + Vanilla JS 기반 예술인 작품 갤러리·포트폴리오 사이트</span>
+                <span class="ct-item-title">작품 포트폴리오 사이트</span>
+                <span class="ct-item-desc">예술인 작품 관리 CMS · EC2·Nginx·SSL 배포 전 과정 직접 수행</span>
               </button>
               <button class="ct-item" onclick="openPopup('upbit-auto')">
                 <span class="ct-item-title">업비트 자동매매 시스템</span>
                 <span class="ct-item-desc">Python + Google Cloud 기반 암호화폐 자동매매 봇 24시간 무중단 운영</span>
-              </button>
-              <button class="ct-item" onclick="openPopup('damso-match')">
-                <span class="ct-item-title">담소혼술바 매칭 시스템</span>
-                <span class="ct-item-desc">좌석 배치를 이분 그래프 최대 가중치 매칭으로 정형화한 1인 풀스택 매칭 서비스</span>
               </button>
             </div>
           </div>
@@ -212,53 +235,66 @@
         <div class="skill-group reveal">
           <h4 class="skill-group-title">Language</h4>
           <div class="skill-tags">
-            <span class="skill-tag"><img src="./Develope_skill_icon/Java-Light.svg" alt="Java">Java</span>
-            <span class="skill-tag"><img src="./Develope_skill_icon/JavaScript.svg" alt="JS">JavaScript</span>
-            <span class="skill-tag"><img src="./Develope_skill_icon/Python-Light.svg" alt="Python">Python</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <h4 class="skill-group-title">Front-End</h4>
-          <div class="skill-tags">
-            <span class="skill-tag"><img src="./Develope_skill_icon/HTML.svg" alt="HTML">HTML</span>
-            <span class="skill-tag"><img src="./Develope_skill_icon/CSS.svg" alt="CSS">CSS</span>
-            <span class="skill-tag"><img src="./Develope_skill_icon/JQuery.svg" alt="jQuery">jQuery</span>
-            <span class="skill-tag">JSP</span>
-            <span class="skill-tag">Thymeleaf</span>
-            <span class="skill-tag"><img src="./Develope_skill_icon/React-Light.svg" alt="React">React.js</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Java-Light.svg" alt="">Java</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/JavaScript.svg" alt="">JavaScript</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/TypeScript.svg" alt="">TypeScript</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Python-Light.svg" alt="">Python</span>
           </div>
         </div>
         <div class="skill-group reveal">
           <h4 class="skill-group-title">Back-End / Framework</h4>
           <div class="skill-tags">
-            <span class="skill-tag"><img src="./Develope_skill_icon/Spring-Light.svg" alt="Spring">Spring</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Spring-Light.svg" alt="">Spring MVC</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Spring-Light.svg" alt="">Spring Boot</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Spring-Light.svg" alt="">Spring Security</span>
             <span class="skill-tag">eGovFramework</span>
             <span class="skill-tag">MyBatis</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Hibernate-Light.svg" alt="">JPA / Hibernate</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">Front-End</h4>
+          <div class="skill-tags">
+            <span class="skill-tag"><img src="./Develope_skill_icon/HTML.svg" alt="">HTML5</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/CSS.svg" alt="">CSS3</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/JQuery.svg" alt="">jQuery</span>
+            <span class="skill-tag">JSP</span>
+            <span class="skill-tag">Thymeleaf</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Bootstrap.svg" alt="">Bootstrap</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/React-Light.svg" alt="">React</span>
           </div>
         </div>
         <div class="skill-group reveal">
           <h4 class="skill-group-title">Database</h4>
           <div class="skill-tags">
             <span class="skill-tag">Oracle</span>
-            <span class="skill-tag">Cubrid</span>
             <span class="skill-tag">Tibero</span>
-            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Cubrid</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/MySQL-Light.svg" alt="">MySQL</span>
+            <span class="skill-tag">MariaDB</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/PostgreSQL-Light.svg" alt="">PostgreSQL</span>
           </div>
         </div>
         <div class="skill-group reveal">
-          <h4 class="skill-group-title">DevOps / Infra</h4>
+          <h4 class="skill-group-title">Infra / DevOps</h4>
           <div class="skill-tags">
-            <span class="skill-tag"><img src="./Develope_skill_icon/Git.svg" alt="Git">Git</span>
-            <span class="skill-tag">SVN</span>
+            <span class="skill-tag">JEUS WAS</span>
             <span class="skill-tag">JBoss</span>
-            <span class="skill-tag">Jeus</span>
+            <span class="skill-tag">Apache Solr</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Nginx.svg" alt="">Nginx</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/AWS-Light.svg" alt="">AWS EC2</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Cloudflare-Light.svg" alt="">Cloudflare</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Linux-Light.svg" alt="">Linux</span>
           </div>
         </div>
         <div class="skill-group reveal">
-          <h4 class="skill-group-title">OS</h4>
+          <h4 class="skill-group-title">Tools</h4>
           <div class="skill-tags">
-            <span class="skill-tag"><img src="./Develope_skill_icon/Linux-Light.svg" alt="Linux">Linux</span>
-            <span class="skill-tag">Windows</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Git.svg" alt="">Git</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Github-Light.svg" alt="">GitHub</span>
+            <span class="skill-tag">SVN</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Idea-Light.svg" alt="">IntelliJ IDEA</span>
+            <span class="skill-tag"><img src="./Develope_skill_icon/Eclipse-Light.svg" alt="">Eclipse</span>
           </div>
         </div>
       </div>
@@ -271,7 +307,7 @@
       <h3 class="section-title reveal">Profile</h3>
       <div class="profile-wrapper reveal">
         <div class="profile-photo">
-          <img src="profile.jpg" alt="Profile Photo" />
+          <img src="profile.jpg" alt="유승표 프로필 사진" />
         </div>
         <div class="profile-info">
           <div class="profile-details">
@@ -285,7 +321,7 @@
             </div>
             <div class="profile-row">
               <span class="profile-label">Career</span>
-              <span class="profile-value" id="careerLength" data-career-start="2022-04">웹 개발 4년 5개월 (2022.04 ~ 현재)</span>
+              <span class="profile-value" id="careerLength" data-career-start="2022-04">공공 SI 백엔드 개발 4년 6개월 (2022.04 ~ 현재)</span>
             </div>
             <div class="profile-row">
               <span class="profile-label">Tel</span>
@@ -297,7 +333,11 @@
             </div>
             <div class="profile-row">
               <span class="profile-label">Github</span>
-              <span class="profile-value"><a href="https://github.com/ryu9634" target="_blank">github.com/ryu9634</a></span>
+              <span class="profile-value"><a href="https://github.com/ryu9634" target="_blank" rel="noopener">github.com/ryu9634</a></span>
+            </div>
+            <div class="profile-row">
+              <span class="profile-label">Blog</span>
+              <span class="profile-value"><a href="https://ry-oops.tistory.com" target="_blank" rel="noopener">ry-oops.tistory.com</a></span>
             </div>
           </div>
 
@@ -306,23 +346,23 @@
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <span class="timeline-badge">Education</span>
-                <h4>서울사이버대학교 입학</h4>
-                <span class="timeline-date">2021. 03</span>
+                <h4>서울사이버대학교 컴퓨터공학과 졸업</h4>
+                <span class="timeline-date">2021. 03 ~ 2026. 02</span>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <span class="timeline-badge career">Career</span>
-                <h4>랜드소프트</h4>
-                <span class="timeline-date">2022. 04 ~ 2025. 09</span>
+                <h4>랜드소프트 &middot; ITO팀 매니저</h4>
+                <span class="timeline-date">2022. 04 ~ 2025. 09 (3년 6개월)</span>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <span class="timeline-badge career">Career</span>
-                <h4>나라원시스템</h4>
+                <h4>주식회사 나라원시스템 &middot; 웹사업부 대리</h4>
                 <span class="timeline-date">2025. 09 ~ 재직 중</span>
               </div>
             </div>
@@ -330,10 +370,19 @@
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <span class="timeline-badge">Education</span>
-                <h4>서울사이버대학교 졸업</h4>
-                <span class="timeline-date">2026. 02</span>
+                <h4>스파르타클럽 프로 캠프 백엔드 실무 설계 트랙 5기</h4>
+                <span class="timeline-date">2026. 09 ~ 2027. 01 (수강 중)</span>
               </div>
             </div>
+          </div>
+
+          <div class="profile-extra">
+            <h4 class="profile-extra-title">Certification &amp; Etc.</h4>
+            <ul class="profile-extra-list">
+              <li><span>코딩활용능력 1급 <em>한국정보통신진흥협회</em></span><span class="profile-extra-date">2024. 10</span></li>
+              <li><span>1종보통운전면허</span><span class="profile-extra-date">2017. 10</span></li>
+              <li><span>해병 병장 만기 제대</span><span class="profile-extra-date">2015. 08 ~ 2017. 05</span></li>
+            </ul>
           </div>
         </div>
       </div>

@@ -150,7 +150,7 @@ const projects = [
     results: [
       "신규 업무 시스템을 기획부터 구현·운영까지 단독으로 완성한 경험 확보",
       "웹 보안 점검 대응 및 근본 원인 기반 장애 해결 역량 강화",
-      "전자정부프레임워크·MyBatis·Tibero 기반 공공 시스템 개발 역량 확보"
+      "권한 기반 데이터 접근제어와 다차원 통계·리포팅을 직접 설계한 경험 확보"
     ]
   },
   {
@@ -174,7 +174,7 @@ const projects = [
     ],
     results: [
       "자격검증 자동화로 담당 부서 운영 부담 경감 및 예약 서비스 신뢰성 향상",
-      "개인정보 생명주기(수집·보관·파기)를 고려한 공공 서비스 개발 경험 확보"
+      "개인정보 생명주기(수집·보관·파기)를 고려한 서비스 설계 경험 확보"
     ]
   },
   {
@@ -264,7 +264,7 @@ const projects = [
     ],
     maintenance: [],
     results: [
-      "SI 환경에서 접하기 어려운 대용량 트래픽·MSA 설계 경험을 보완하기 위해 수강 중"
+      "대용량 트래픽 처리와 MSA 설계 역량을 실무 수준으로 끌어올리기 위해 수강 중"
     ]
   },
   {
@@ -446,7 +446,7 @@ function renderCareerLength() {
   var rest = months % 12;
   var label = years ? years + "년" + (rest ? " " + rest + "개월" : "") : rest + "개월";
 
-  el.textContent = "공공 SI 백엔드 개발 " + label + " (" + startYear + "." + start[1] + " ~ 현재)";
+  el.textContent = "백엔드 개발 " + label + " (" + startYear + "." + start[1] + " ~ 현재)";
 }
 
 // ===== DOM Ready =====

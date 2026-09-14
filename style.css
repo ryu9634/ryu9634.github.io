@@ -835,6 +835,31 @@ nav a:hover {
   font-weight: 700;
 }
 
+.ct-group {
+  font-family: var(--font-en);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--primary);
+  margin-top: 0.6rem;
+  padding-left: 0.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ct-group::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--bg-alt);
+}
+
+.ct-group:first-child {
+  margin-top: 0;
+}
+
 /* ===== Career position / award ===== */
 .ct-position {
   display: inline-block;

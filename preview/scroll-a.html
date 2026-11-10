@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>시안 A · 핀 챕터 — 유승표</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css" />
+<style>
+/* ===== 시안 A · 핀 챕터 =====
+   섹션이 화면에 고정된 채, 스크롤 진행도에 따라 항목이 순서대로 떠오른다.
+   화면은 멈춰 있고 내용만 쌓이는 느낌.
+   기본(정지) 상태가 완성형이며, 연출은 아래 @supports 블록 안에만 존재한다. */
+
+.chapter { position: relative; }
+
+/* sticky 는 부모 높이 안에서만 움직인다 — 트랙 높이를 .wrap 까지 전달 */
+.chapter > .wrap { min-height: inherit; }
+
+.chapter__pin {
+  position: sticky;
+  top: 4.2rem;
+  padding: var(--space-lg) 0 var(--space-xl);
+}
+
+.chapter__head { margin-bottom: var(--space-lg); }
+.chapter__head .h2 { margin: 0.5rem 0 0.4rem; }
+
+.chapter__org {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.chapter__steps { list-style: none; }
+
+.chapter__steps li {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr);
+  gap: 0 0.6rem;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.chapter__steps li:first-child { border-top: 0; }
+
+.chapter__steps .n {
+  font-family: var(--font-en);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding-top: 0.25rem;
+}
+
+.chapter__steps .row-desc { grid-column: 2; }
+
+/* 핀 트랙: 길이가 곧 고정 시간 */
+.chapter--a { min-height: 230vh; }
+.chapter--b { min-height: 250vh; }
+
+@media (max-width: 48rem) {
+  .chapter--a, .chapter--b { min-height: 0; }
+  .chapter__pin { position: static; }
+}
+
+/* ===== 연출 (지원 브라우저 · 모션 허용 · 40rem 이상에서만) ===== */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) and (min-width: 40rem) {
+    .chapter--a { view-timeline: --cha block; }
+    .chapter--b { view-timeline: --chb block; }
+
+    .chapter__steps li { animation: step-in linear both; }
+    .chapter--a .chapter__steps li { animation-timeline: --cha; }
+    .chapter--b .chapter__steps li { animation-timeline: --chb; }
+
+    .chapter__steps li:nth-child(1) { animation-range: contain 2% contain 18%; }
+    .chapter__steps li:nth-child(2) { animation-range: contain 16% contain 32%; }
+    .chapter__steps li:nth-child(3) { animation-range: contain 30% contain 46%; }
+    .chapter__steps li:nth-child(4) { animation-range: contain 44% contain 60%; }
+    .chapter__steps li:nth-child(5) { animation-range: contain 58% contain 74%; }
+
+    @keyframes step-in {
+      from { opacity: 0.18; transform: translateY(14px); }
+      to   { opacity: 1; transform: none; }
+    }
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="switch">
+  <b>시안</b>
+  <a href="scroll-a.html" aria-current="page">A · 핀 챕터</a>
+  <a href="scroll-b.html">B · 스티키 분할</a>
+  <a href="scroll-c.html">C · 가로 팬</a>
+  <span class="tag">스크롤해 보세요</span>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="hero-eyebrow">Backend Developer</p>
+    <h1 class="hero-title">버들처럼<br><em>유연</em>하게</h1>
+    <p class="hero-desc">신규 시스템을 요구사항 정의부터 설계·구현·배포·운영까지 단독으로 완성해온 백엔드 개발자입니다.</p>
+  </div>
+</header>
+
+<main>
+  <section class="chapter chapter--a section">
+    <div class="wrap">
+      <div class="chapter__pin">
+        <div class="chapter__head">
+          <p class="kicker">Career 01</p>
+          <div class="chapter__org">
+            <h2 class="h2">랜드소프트</h2>
+            <span class="meta">2022.04 — 2025.09 · 3년 6개월</span>
+          </div>
+          <p><span class="pill award">2024년 우수사원</span></p>
+          <p class="lede">국립중앙도서관 등 공공 도서관·지식정보 시스템 구축 및 통합유지관리</p>
+        </div>
+        <ol class="chapter__steps">
+          <li><span class="n">01</span><span class="row-title">국립중앙도서관 통계자료시스템</span><span class="row-desc">신규 구축 — DB 설계, 통계 SQL 작성, amChart 기반 대시보드 구현</span></li>
+          <li><span class="n">02</span><span class="row-title">국립중앙도서관 홈페이지</span><span class="row-desc">SQL 튜닝·캐싱으로 응답 속도 개선, XSS·SQL Injection 등 보안 취약점 조치</span></li>
+          <li><span class="n">03</span><span class="row-title">국립어린이청소년도서관</span><span class="row-desc">신규 게시판 단독 개발 및 운영, 프로그램 신청 로직 개선</span></li>
+          <li><span class="n">04</span><span class="row-title">국가전자도서관</span><span class="row-desc">로그인 인증 설계, Solr 검색엔진 색인 관리 및 형태소 분석 최적화</span></li>
+          <li><span class="n">05</span><span class="row-title">국가지식자원공유서비스</span><span class="row-desc">통합뷰어 민원 처리, 협약 도서관 권한 관리</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter chapter--b section section-alt">
+    <div class="wrap">
+      <div class="chapter__pin">
+        <div class="chapter__head">
+          <p class="kicker">Career 02</p>
+          <div class="chapter__org">
+            <h2 class="h2">나라원시스템</h2>
+            <span class="meta">2025.09 — 현재</span>
+          </div>
+          <p class="lede"><b>성동구청 통합홈페이지 운영·고도화</b><br>하나의 운영 사업 안에서 신규 시스템 구축과 기존 서비스 개선을 병행</p>
+        </div>
+        <ol class="chapter__steps">
+          <li><span class="n">01</span><span class="row-title">성동 플러스원</span><span class="row-desc">기부·나눔 관리 시스템을 단독 설계·개발하여 실서버 반영</span></li>
+          <li><span class="n">02</span><span class="row-title">성동뉴스</span><span class="row-desc">PHP 기반 구 서버 폐쇄에 대응해 발행형 모듈을 신규 구축·이관</span></li>
+          <li><span class="n">03</span><span class="row-title">신속예약 시스템</span><span class="row-desc">자격검증 자동화, 대기자 자동승계·추첨 로직, 휴관일 관리, 개인정보 파기</span></li>
+          <li><span class="n">04</span><span class="row-title">구청장실 리뉴얼</span><span class="row-desc">구청장 교체에 따른 전면 UI 개편 및 CMS 기반 이관</span></li>
+          <li><span class="n">05</span><span class="row-title">기타 민원 시스템</span><span class="row-desc">복지종합상담 신청폼, SD명예의전당 게시판, 보안 취약점 조치, DB 부하 대응</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">Side Project</p>
+      <h2 class="h2" style="margin:.6rem 0 1.2rem">담소 매칭 시스템</h2>
+      <p class="lede" style="margin-bottom:1.4rem">오프라인 소개팅 이벤트의 좌석 배치를 이분 그래프 최대 가중치 매칭 문제로 정형화하고, MBTI 궁합·가치관 유사도를 결합한 100점 스코어링 엔진으로 최적 좌석을 자동 산출.</p>
+      <div class="row"><span class="row-title">핵심 알고리즘</span><span class="row-desc">좌석 n ≤ 9 규모를 활용한 순열 완전탐색으로 근사가 아닌 정확한 최적해 보장</span></div>
+      <div class="row"><span class="row-title">스택</span><span class="row-desc">Java 21 · Spring Boot 3.3 · JPA · PostgreSQL · React 18 · TypeScript</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>SeungPyo Ryu — 시안 A · 핀 챕터</footer>
+
+</body>
+</html>

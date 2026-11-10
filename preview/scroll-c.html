@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>시안 C · 가로 팬 — 유승표</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css" />
+<style>
+/* ===== 시안 C · 가로 팬 =====
+   세로로 스크롤하면 화면은 고정되고, 커리어 카드가 가로로 흘러간다.
+   인상이 가장 강하지만 훑어보기가 가장 어렵다.
+   기본 상태는 가로 스와이프 가능한 정적 레일이며, 연출은 @supports 안에만 있다. */
+
+.pan { position: relative; }
+
+.pan__pin {
+  position: sticky;
+  top: 0;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0;
+  overflow: hidden;
+}
+
+.pan__head { width: 90%; max-width: 1120px; margin: 0 auto; }
+.pan__head .h2 { margin: 0.5rem 0 0.3rem; }
+
+/* 기본: 손가락/트랙패드로 가로 스크롤 가능한 레일 (연출 없이도 완성형) */
+.rail {
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.rail__track {
+  display: flex;
+  gap: var(--space-md);
+  padding-inline: 5vw;
+  width: max-content;
+}
+
+.card {
+  flex: 0 0 min(78vw, 22rem);
+  scroll-snap-align: center;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.card .n {
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent);
+}
+
+.card .row-title { font-size: 1.02rem; }
+
+.hint {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* ===== 연출 (지원 브라우저 · 모션 허용 · 64rem 이상) =====
+   이 아래에서만 세로 스크롤이 가로 이동으로 번역된다.
+   좁은 화면에서는 위의 스와이프 레일이 그대로 쓰인다. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) and (min-width: 64rem) {
+    /* 레일 폭 = n*(카드 + 간격) - 간격.  끝점은 마지막 카드 오른쪽 끝이
+       화면 오른쪽 여백(5vw)에 닿는 지점. 레일이 화면보다 좁으면 움직이지 않는다. */
+    .pan {
+      --card-w: 23rem;
+      --rail-gap: 1.5rem;
+      --rail-w: calc(5 * (var(--card-w) + var(--rail-gap)) - var(--rail-gap));
+      min-height: 320vh;
+      view-timeline: --pan block;
+    }
+
+    .pan--short {
+      --rail-w: calc(4 * (var(--card-w) + var(--rail-gap)) - var(--rail-gap));
+      min-height: 260vh;
+    }
+
+    /* 바깥은 제자리에서 잘라내고, 안쪽 트랙만 움직인다.
+       움직이는 요소 자신에 clip 을 걸면 클립 영역이 같이 이동해 잘린다. */
+    .rail {
+      overflow-x: clip;
+      scroll-snap-type: none;
+    }
+
+    .rail__track {
+      padding-inline: 0;
+      gap: var(--rail-gap);
+      animation: pan-x linear both;
+      animation-timeline: --pan;
+      animation-range: contain 0% contain 100%;
+    }
+
+    .card { flex-basis: var(--card-w); }
+
+    @keyframes pan-x {
+      from { transform: translateX(5vw); }
+      to   { transform: translateX(min(5vw, calc(95vw - var(--rail-w)))); }
+    }
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="switch">
+  <b>시안</b>
+  <a href="scroll-a.html">A · 핀 챕터</a>
+  <a href="scroll-b.html">B · 스티키 분할</a>
+  <a href="scroll-c.html" aria-current="page">C · 가로 팬</a>
+  <span class="tag">스크롤해 보세요</span>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="hero-eyebrow">Backend Developer</p>
+    <h1 class="hero-title">버들처럼<br><em>유연</em>하게</h1>
+    <p class="hero-desc">신규 시스템을 요구사항 정의부터 설계·구현·배포·운영까지 단독으로 완성해온 백엔드 개발자입니다.</p>
+  </div>
+</header>
+
+<main>
+  <section class="pan">
+    <div class="pan__pin">
+      <div class="pan__head">
+        <p class="kicker">Career 01</p>
+        <h2 class="h2">랜드소프트</h2>
+        <p class="meta">2022.04 — 2025.09 · 3년 6개월 &nbsp; <span class="pill award">2024년 우수사원</span></p>
+      </div>
+      <div class="rail"><div class="rail__track">
+        <article class="card"><span class="n">01</span><span class="row-title">국립중앙도서관 통계자료시스템</span><span class="row-desc">신규 구축 — DB 설계, 통계 SQL 작성, amChart 기반 대시보드 구현</span></article>
+        <article class="card"><span class="n">02</span><span class="row-title">국립중앙도서관 홈페이지</span><span class="row-desc">SQL 튜닝·캐싱으로 응답 속도 개선, XSS·SQL Injection 등 보안 취약점 조치</span></article>
+        <article class="card"><span class="n">03</span><span class="row-title">국립어린이청소년도서관</span><span class="row-desc">신규 게시판 단독 개발 및 운영, 프로그램 신청 로직 개선</span></article>
+        <article class="card"><span class="n">04</span><span class="row-title">국가전자도서관</span><span class="row-desc">로그인 인증 설계, Solr 검색엔진 색인 관리 및 형태소 분석 최적화</span></article>
+        <article class="card"><span class="n">05</span><span class="row-title">국가지식자원공유서비스</span><span class="row-desc">통합뷰어 민원 처리, 협약 도서관 권한 관리</span></article>
+      </div>
+      </div>
+      <p class="hint">좁은 화면에서는 손으로 옆으로 밀어 볼 수 있습니다.</p>
+    </div>
+  </section>
+
+  <section class="pan section-alt">
+    <div class="pan__pin">
+      <div class="pan__head">
+        <p class="kicker">Career 02</p>
+        <h2 class="h2">나라원시스템</h2>
+        <p class="meta">2025.09 — 현재 · 성동구청 통합홈페이지 운영·고도화</p>
+      </div>
+      <div class="rail"><div class="rail__track">
+        <article class="card"><span class="n">신규 구축</span><span class="row-title">성동 플러스원</span><span class="row-desc">기부·나눔 관리 시스템을 단독 설계·개발하여 실서버 반영</span></article>
+        <article class="card"><span class="n">신규 구축</span><span class="row-title">성동뉴스</span><span class="row-desc">PHP 기반 구 서버 폐쇄에 대응해 발행형 모듈을 신규 구축·이관</span></article>
+        <article class="card"><span class="n">기능 개선</span><span class="row-title">신속예약 시스템</span><span class="row-desc">자격검증 자동화, 대기자 자동승계·추첨 로직, 휴관일 관리, 개인정보 파기</span></article>
+        <article class="card"><span class="n">기능 개선</span><span class="row-title">구청장실 리뉴얼</span><span class="row-desc">구청장 교체에 따른 전면 UI 개편 및 CMS 기반 이관</span></article>
+        <article class="card"><span class="n">운영</span><span class="row-title">기타 민원 시스템</span><span class="row-desc">복지종합상담 신청폼, SD명예의전당 게시판, 보안 취약점 조치, DB 부하 대응</span></article>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pan pan--short">
+    <div class="pan__pin">
+      <div class="pan__head">
+        <p class="kicker">Side Project</p>
+        <h2 class="h2">담소 매칭 시스템</h2>
+        <p class="meta">Java 21 · Spring Boot 3.3 · JPA · PostgreSQL · React 18 · TypeScript</p>
+      </div>
+      <div class="rail"><div class="rail__track">
+        <article class="card"><span class="n">01</span><span class="row-title">문제 정형화</span><span class="row-desc">‘남녀를 궁합 좋은 순으로 옆자리에 앉힌다’를 고전적 할당 문제로 환원 — 이분 그래프 최대 가중치 완전 매칭</span></article>
+        <article class="card"><span class="n">02</span><span class="row-title">알고리즘 선택</span><span class="row-desc">좌석 n ≤ 9 규모를 활용한 순열 완전탐색으로 정확한 최적해 보장</span></article>
+        <article class="card"><span class="n">03</span><span class="row-title">제약의 단일 스코어화</span><span class="row-desc">소프트 페널티 · 미세 노이즈 타이브레이킹 · 지수 가중치</span></article>
+        <article class="card"><span class="n">04</span><span class="row-title">1인 풀스택 운영</span><span class="row-desc">기획·백엔드·프론트·DB·배포 전 영역 단독 개발, 단일 JAR 배포</span></article>
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>SeungPyo Ryu — 시안 C · 가로 팬</footer>
+
+</body>
+</html>

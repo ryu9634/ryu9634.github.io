@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>스크롤 연출 시안 — 유승표</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css" />
+<style>
+.menu { display: grid; gap: 1rem; margin-top: var(--space-lg); }
+.menu a {
+  display: block;
+  padding: 1.3rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  transition: border-color var(--dur) var(--ease-out), transform var(--dur) var(--ease-out);
+}
+.menu a:hover { border-color: var(--accent); transform: translateY(-2px); }
+.menu .row-title { display: block; font-size: 1.1rem; }
+.menu .row-desc { display: block; margin-top: .3rem; }
+.menu .meta { display: block; margin-top: .55rem; }
+.note { margin-top: var(--space-lg); font-size: .86rem; color: var(--muted); max-width: 54ch; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="hero-eyebrow">Prototype</p>
+    <h1 class="hero-title">스크롤 연출<br><em>시안</em> 3종</h1>
+    <p class="hero-desc">화면은 고정된 채 레이아웃이 내려오는 느낌 — 세 가지 방향으로 만들었습니다. 실제로 스크롤해 보셔야 차이가 느껴집니다.</p>
+  </div>
+</header>
+
+<main class="section">
+  <div class="wrap">
+    <p class="kicker">Pick one</p>
+    <nav class="menu">
+      <a href="scroll-a.html">
+        <span class="row-title">A · 핀 챕터</span>
+        <span class="row-desc">회사 블록이 화면에 고정된 채, 프로젝트가 한 줄씩 떠오릅니다. 화면이 멈춰 있고 내용만 쌓이는 느낌이 가장 강합니다.</span>
+        <span class="meta">인상 ●●●○ · 읽기 ●●○○ · 모바일 ●●●○</span>
+      </a>
+      <a href="scroll-b.html">
+        <span class="row-title">B · 스티키 분할</span>
+        <span class="row-desc">왼쪽 회사명·기간이 고정되고 오른쪽 목록만 흘러갑니다. 스크롤 속도를 뺏지 않아 훑어보기가 됩니다.</span>
+        <span class="meta">인상 ●●○○ · 읽기 ●●●● · 모바일 ●●●●</span>
+      </a>
+      <a href="scroll-c.html">
+        <span class="row-title">C · 가로 팬</span>
+        <span class="row-desc">세로로 스크롤하면 화면이 고정되고 카드가 가로로 흘러갑니다. 인상은 가장 세지만 훑어보기가 가장 어렵습니다.</span>
+        <span class="meta">인상 ●●●● · 읽기 ●○○○ · 모바일 ●●○○</span>
+      </a>
+    </nav>
+
+    <p class="note">세 시안 모두 실제 경력 내용으로 만들었고, 연출이 지원되지 않는 환경(구형 브라우저·모션 최소화 설정·좁은 화면)에서는 연출 없이 완성된 레이아웃이 그대로 보입니다. 본 사이트(<a href="../" style="color:var(--primary);text-decoration:underline">index</a>)는 건드리지 않았습니다.</p>
+  </div>
+</main>
+
+<footer>SeungPyo Ryu — Preview</footer>
+
+</body>
+</html>
